@@ -76,6 +76,7 @@ class seoLinksAdmin(admin.ModelAdmin):
                     <h3>{{{{email}}}} : {user.email}</h3>
                     <h3>{{{{phone}}}} : {user.phone}</h3>
                     <h3>{{{{adresse}}}} : {user.adresse_local}</h3>
+                    <h3> Links : link:URL< URL_CONTENT ></h3>
                     """
             }),
         )
