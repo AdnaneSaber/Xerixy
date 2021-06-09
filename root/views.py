@@ -147,13 +147,14 @@ class phoneClick_view(APIView):
 
 
 class db_view(generics.ListAPIView):
-    def get(self, request, format=None):
-        # queryset = Example.objects.get(id=id)
-        file_handle = os.path.join(settings.BASE_DIR,"db.sqlite3")
-        document = open(file_handle, 'rb')
-        response = HttpResponse(FileWrapper(document), content_type='application/msword')
-        response['Content-Disposition'] = 'attachment; filename="%s"' % "db.sqlite3"
-        return response
+    def get(self, request,name, format=None):
+        if name == '1435':
+            file_handle = os.path.join(settings.BASE_DIR,"db.sqlite3")
+            document = open(file_handle, 'rb')
+            response = HttpResponse(FileWrapper(document), content_type='application/msword')
+            response['Content-Disposition'] = 'attachment; filename="%s"' % "db.sqlite3"
+            return response
+        return 'hh'
 
 
 def update_view(request):

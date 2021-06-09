@@ -10,7 +10,7 @@ $darker:#140d17;
         padding: 20px;
     }
 
-    h4 {
+    h1 {
         color: #fff;
         width: 100%;
         text-align: center;
@@ -19,8 +19,15 @@ $darker:#140d17;
         text-transform: uppercase;
         margin: 0 0 30px 0;
     }
-
+    a{
+        color: #fff;
+        font-family: 'Montserrat-Bold';
+    }
     p {
         color: #fff;
+        line-height: 2em;
     }
+    // h5{
+
+    // }
 }
