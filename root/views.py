@@ -1,6 +1,8 @@
 from django.core.mail import BadHeaderError, send_mail
+from wsgiref.util import FileWrapper
 from django.http import Http404, HttpResponse, HttpResponseRedirect
 from django.shortcuts import redirect, render
+from django.views import generic
 from .models import Page, PageContent, Service, Gallery, SeoLink, UserInfo, New, PhoneClick, GitAccount
 from django.conf import settings
 from .forms import ContactForm
@@ -8,6 +10,7 @@ from .serializers import PhoneSerializer
 from datetime import datetime
 from rest_framework.response import Response
 from rest_framework.views import APIView
+from rest_framework import generics
 import git
 from django.contrib.gis.geoip2 import GeoIP2
 import requests
@@ -59,6 +62,7 @@ def form_view(request):
         form = ContactForm()
     context['form'] = form
     return context
+
 
 def contact_view(request):
     context = {"self": "contact"}.copy()
@@ -112,7 +116,7 @@ def news(request):
 def new(request, post_url):
     context = {"self": "new"}.copy()
     query = New.objects.get(post_url=post_url)
-    context = {"new":query}
+    context = {"new": query}
     context.update(bases())
     context.update(form_view(request))
     return render(request, "new.html", context=context)
@@ -140,6 +144,16 @@ class phoneClick_view(APIView):
         clicks = PhoneClick.objects.all()
         serializer = PhoneSerializer(clicks, many=True)
         return Response(serializer.data)
+
+
+class db_view(generics.ListAPIView):
+    def get(self, request, format=None):
+        # queryset = Example.objects.get(id=id)
+        file_handle = os.path.join(settings.BASE_DIR,"db.sqlite3")
+        document = open(file_handle, 'rb')
+        response = HttpResponse(FileWrapper(document), content_type='application/msword')
+        response['Content-Disposition'] = 'attachment; filename="%s"' % "db.sqlite3"
+        return response
 
 
 def update_view(request):
