@@ -149,7 +149,7 @@ class phoneClick_view(APIView):
 class ExternalTools_view(APIView):
     def get(self, request):
         queryset = ExternalTools.objects.first()
-        return Response(bool(queryset))
+        return Response(str(queryset))
 
 
 class db_view(generics.ListAPIView):
