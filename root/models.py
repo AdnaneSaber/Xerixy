@@ -6,6 +6,7 @@ from django.db import models
 from unidecode import unidecode
 from django.core.validators import RegexValidator
 from PIL import Image
+from tinymce.models import HTMLField
 
 
 def assetSaver(instance, filename):
@@ -172,7 +173,7 @@ class Gallery(models.Model):
 class SeoLink(models.Model):
     title = models.CharField(max_length=255, blank=False, null=False)
     url = models.CharField(max_length=255, null=False, blank=True, unique=True)
-    content = models.TextField(blank=False, default="pas de contenu..")
+    content = HTMLField(blank=False, default="pas de contenu..")
     meta_title = models.CharField(blank=True,
                                   max_length=60)
     meta_description = models.CharField(blank=True,

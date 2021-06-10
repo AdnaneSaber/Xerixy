@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'crispy_forms',
     # 'corsheaders',
+    'tinymce',
     'portfolio',
     'captcha',
     'adminsortable2',

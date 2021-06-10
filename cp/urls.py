@@ -31,11 +31,12 @@ sitemaps = {
 
 urlpatterns = [
     path('adminX/', admin.site.urls),
+     path('tinymce/', include('tinymce.urls')),
+    path('api/', include('root.urls')),
 ]
 urlpatterns +=i18n_patterns(
     
     path('', root_view.index, name="index"),
-    path('api/', include('root.urls')),
     path('portfolio/', include('portfolio.urls')),
     path('chat/', include('chat.urls')),
     path('adminXerixyUpdate/', root_view.update_view, name='update'),
