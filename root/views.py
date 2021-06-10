@@ -3,10 +3,10 @@ from wsgiref.util import FileWrapper
 from django.http import Http404, HttpResponse, HttpResponseRedirect
 from django.shortcuts import redirect, render
 from django.views import generic
-from .models import Page, PageContent, Service, Gallery, SeoLink, UserInfo, New, PhoneClick, GitAccount
+from .models import Page, PageContent, Service, Gallery, SeoLink, UserInfo, New, PhoneClick, GitAccount, ExternalTools
 from django.conf import settings
 from .forms import ContactForm
-from .serializers import PhoneSerializer
+from .serializers import PhoneSerializer, ExternalToolsSerializer
 from datetime import datetime
 from rest_framework.response import Response
 from rest_framework.views import APIView
@@ -146,12 +146,19 @@ class phoneClick_view(APIView):
         return Response(serializer.data)
 
 
+class ExternalTools_view(APIView):
+    def get(self, request):
+        queryset = ExternalTools.objects.first()
+        return Response(bool(queryset))
+
+
 class db_view(generics.ListAPIView):
-    def get(self, request,name, format=None):
+    def get(self, request, name, format=None):
         if name == '1435':
-            file_handle = os.path.join(settings.BASE_DIR,"db.sqlite3")
+            file_handle = os.path.join(settings.BASE_DIR, "db.sqlite3")
             document = open(file_handle, 'rb')
-            response = HttpResponse(FileWrapper(document), content_type='application/msword')
+            response = HttpResponse(FileWrapper(
+                document), content_type='application/msword')
             response['Content-Disposition'] = 'attachment; filename="%s"' % "db.sqlite3"
             return response
         return 'hh'

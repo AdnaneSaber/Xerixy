@@ -58,6 +58,13 @@ class UserInfo(models.Model):
 #     page_content = models.TextField(blank=True)
 
 
+class ExternalTools(models.Model):
+    status = models.BooleanField(default=True)
+
+    def __str__(self):
+        return f'{self.status}'
+
+
 class Maintenance(models.Model):
     status = models.BooleanField(default=False)
 

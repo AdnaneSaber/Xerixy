@@ -2,5 +2,4 @@ User-agent: *
 Disallow: /adminX/
 Disallow: /api/
 Disallow: /todos/
-Disallow: /phone/
 Disallow: /portfolio/

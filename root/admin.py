@@ -61,6 +61,17 @@ class MaintenanceAdmin(admin.ModelAdmin):
         if count == 0:
             return True
         return False
+class ExternalToolsAdmin(admin.ModelAdmin):
+
+    def has_delete_permission(self, request, obj=None):
+        return False
+
+    def has_add_permission(self, request):
+        # if there's already an entry, do not allow adding
+        count = ExternalTools.objects.all().count()
+        if count == 0:
+            return True
+        return False
 
 
 class seoLinksAdmin(admin.ModelAdmin):
@@ -123,5 +134,6 @@ admin.site.register(UserInfo, UserInfosAdmin)
 admin.site.register(Service, ServiceAdmin)
 admin.site.register(SeoLink, seoLinksAdmin)
 admin.site.register(Maintenance, MaintenanceAdmin)
+admin.site.register(ExternalTools, ExternalToolsAdmin)
 admin.site.register(GitAccount, GitAdmin)
 admin.site.register(Combination,CombinationAdmin)
