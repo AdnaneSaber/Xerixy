@@ -2,8 +2,8 @@
 {% load static %}
 {% load fill_vars %}
 {% block idBody %}{{self.id}}{% endblock idBody %}
-{% block metaT %}{{self.page_meta_title}}{% endblock metaT %}
-{% block metaD %}{{self.page_meta_description}}{% endblock metaD %}
+{% block metaT %}{{link.meta_title}}{% endblock metaT %}
+{% block metaD %}{{link.meta_description}}{% endblock metaD %}
 {% block title %}
 <link rel="stylesheet" href="{% static 'css/seo.css' %}">
 <title>{{user.nom_sur_site | capfirst}} | {{link.title | capfirst}}</title>
