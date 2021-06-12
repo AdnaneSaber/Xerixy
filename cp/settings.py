@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 
 from pathlib import Path
 import os
+from django.utils.translation import ugettext_lazy as _
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -80,7 +81,7 @@ MIDDLEWARE = [
 CONTEXT_PROCESSORS = ['maintenance_mode.context_processors.maintenance_mode']
 ROOT_URLCONF = 'cp.urls'
 
-MIDDLEWARE_CLASSES = ('maintenance_mode.middleware.MaintenanceModeMiddleware',)
+MIDDLEWARE_CLASSES = ('maintenance_mode.middleware.MaintenanceModeMiddleware','django.middleware.locale.LocaleMiddleware',)
 CACHES = {
     'default': {
         'BACKEND': 'django.core.cache.backends.filebased.FileBasedCache',
@@ -144,8 +145,11 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/3.1/topics/i18n/
 
-LANGUAGE_CODE = 'en'
-
+LANGUAGE_CODE = 'fr'
+LANGUAGES = [
+  ('en', _('en')),
+  ('fr', _('fr')),
+]
 TIME_ZONE = 'UTC'
 
 USE_I18N = True

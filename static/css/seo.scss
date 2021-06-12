@@ -5,6 +5,7 @@ $darker:#140d17;
 .contentContainer {
     background-color: $dark;
     padding: 50px 100px 100px;
+    color: #fff;
 
     @media screen and (max-width:700px) {
         padding: 20px;

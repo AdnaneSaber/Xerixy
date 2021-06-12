@@ -1,7 +1,7 @@
 import re
 from django import template
 from ..models import UserInfo 
-from django.utils.translation import ugettext
+from django.utils.translation import ugettext,gettext
 
 register = template.Library()
 

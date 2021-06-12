@@ -1,10 +1,11 @@
-<!doctype html>
-<html lang="en">
 {% load static %}
 {% load i18n %}
 {% load compress %}
 {% load gtm_tags %}
 {% load fill_vars %}
+<!doctype html>
+{% get_current_language as LANGUAGE_CODE %}
+<html lang="{{LANGUAGE_CODE}}">
 
 <head>
     <!-- Required meta tags -->
@@ -13,7 +14,6 @@
     <meta name="title" content="{% block metaT %}{% endblock metaT %} | Xerixy">
     <meta name="description" content="{% block metaD %}{% endblock metaD %}">
     {% comment %} Fonts {% endcomment %}
-    {% get_current_language as language %}
     <style>
         @font-face {
             font-family: 'Montserrat-Light';
@@ -74,6 +74,8 @@
     <link rel="apple-touch-icon" sizes="120x120" href="{% static 'logo/favicon-120.png' %}">
     <link rel="apple-touch-icon" sizes="144x144" href="{% static 'logo/favicon-144.png' %}">
     <link rel="apple-touch-icon" sizes="152x152" href="{% static 'logo/favicon-152.png' %}">
+    <link rel="alternate" hreflang="en" href="https://www.xerixy.com/en/" />
+    <link rel="alternate" hreflang="fr" href="https://www.xerixy.com/fr/" />
     <meta name="application-name" content="">
     <meta name="msapplication-TileImage" content="{% static 'logo/favicon-144.png' %}">
     <meta name="msapplication-TileColor" content="#ffffff">
@@ -100,7 +102,7 @@
                 <img src="{% static 'logo/logo.png' %}" alt="{{user.nom_sur_site}}" title="{{user.nom_sur_site}}" />
             </a>
         </div>
-        <button id="navCollapse">
+        <button title="Collapse navbar" id="navCollapse">
             <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="bars"
                 class="svg-inline--fa fa-bars fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 448 512">
@@ -122,13 +124,45 @@
                 <li class="navLinksItem"><a href="{% url 'services' %}">{% trans 'Our offers' %}</a></li>
                 {% endif %}
                 {% for page in pages %}
-                <li class="navLinksItem"><a href="{% url 'page' page.page_url %}">{% blocktrans with page.page_title|template_trans as page_title %}{{page_title}}{% endblocktrans %}</a></li>
+                <li class="navLinksItem"><a
+                        href="{% url 'page' page.page_url %}">{% blocktrans with page.page_title|template_trans as page_title %}{{page_title}}{% endblocktrans %}</a>
+                </li>
                 {% endfor %}
                 {% if news %}
                 <li class="navLinksItem"><a href="{% url 'news' %}">{% trans 'Blog' %}</a></li>
                 {% endif %}
                 <li class="navLinksItem"><a href="{% url 'contact' %}">{% trans 'Contact' %}</a></li>
             </ul>
+        </div>
+        <div class="language">
+            <div class="overView">
+                {% if LANGUAGE_CODE == 'fr' %}
+                <button title="{% trans 'Pick your language' %}" id="languageToggler">
+                    <img src="{% static 'images/fr.svg' %}" alt="Xerixy languages" />
+                    <img class="arrow" src="{% static 'images/angle-right.svg' %}" alt="arrow" />
+                </button>
+                {% elif LANGUAGE_CODE == 'en'  %}
+                <button title="{% trans 'Pick your language' %}" id="languageToggler">
+                    <img src="{% static 'images/en.svg' %}" alt="Xerixy languages" />
+                    <img class="arrow" src="{% static 'images/angle-right.svg' %}" alt="arrow" />
+                </button>
+                {% endif %}
+            </div>
+            <div class="otherView" id="hiddenLanguages">
+                <form action="{% url 'set_language' %}" method="post">
+                    {% csrf_token %}
+                    <input name="next" type="hidden" value="{{ redirect_to }}">
+                    {% if LANGUAGE_CODE == 'fr' %}
+                    <input type="hidden" name="language" value="en">
+                    <button title="English" type="submit"><img src="{% static 'images/en.svg' %}"
+                            alt="Xerixy languages" /></button>
+                    {% elif LANGUAGE_CODE == 'en'  %}
+                    <input type="hidden" name="language" value="fr">
+                    <button title="Français" type="submit"><img src="{% static 'images/fr.svg' %}"
+                            alt="Xerixy languages" /></button>
+                    {% endif %}
+                </form>
+            </div>
         </div>
     </nav>
     {% block content %}
@@ -148,19 +182,24 @@
                     <li class="navLinksItem"><a href="{% url 'services' %}">{% trans 'Our offers' %}</a></li>
                     {% endif %}
                     {% for page in pages %}
-                    <li class="navLinksItem"><a href="{% url 'page' page.page_url %}">{% blocktrans with page.page_title|template_trans as page_title %}{{page_title}}{% endblocktrans %}</a></li>
+                    <li class="navLinksItem"><a
+                            href="{% url 'page' page.page_url %}">{% blocktrans with page.page_title|template_trans as page_title %}{{page_title}}{% endblocktrans %}</a>
+                    </li>
                     {% endfor %}
                     {% if news %}
                     <li class="navLinksItem"><a href="{% url 'news' %}">{% trans 'Blog' %}</a></li>
                     {% endif %}
-                    <li class="navLinksItem"><a href="{% url 'contact' %}">{% trans 'Contact' %}</a></li>
+                    <li class="navLinksItem"><a
+                            href="{% url 'contact' %}">{% trans 'Contact' %}{{LANGUAGE_CODE|upper}}</a></li>
                 </ul>
             </div>
             <div class="seoLinks">
                 <h2>{% trans 'Frequent searches' %}</h2>
                 <ul id="seoL">
                     {% for link in seo %}
-                    <li class="navLinksItem"><a href="{% url 'seo' link.url %}">{% blocktrans with link.title|template_trans as link_title %}{{link_title}}{% endblocktrans %}</a></li>
+                    <li class="navLinksItem"><a
+                            href="{% url 'seo' link.url %}">{% blocktrans with link.title|template_trans as link_title %}{{link_title}}{% endblocktrans %}</a>
+                    </li>
                     {% endfor %}
                 </ul>
             </div>
@@ -182,6 +221,20 @@
 
         // console.log(jsonResponse.ip, jsonResponse.country)
     </script>
+    <!-- <form action="{% url 'set_language' %}" method="post">{% csrf_token %}
+        <input name="next" type="hidden" value="{{ redirect_to }}">
+        <select name="language">
+            {% get_current_language as LANGUAGE_CODE %}
+            {% get_available_languages as LANGUAGES %}
+            {% get_language_info_list for LANGUAGES as languages %}
+            {% for language in languages %}
+                <option value="{{ language.code }}"{% if language.code == LANGUAGE_CODE %} selected{% endif %}>
+                    {{ language.name_local }} ({{ language.code }})
+                </option>
+            {% endfor %}
+        </select>
+        <input type="submit" value="Go">
+    </form> -->
     <!-- END LOCATOR -->
     {% compress js %}
     <script src="{% static 'js/jquery.min.js' %}"></script>

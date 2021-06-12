@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-06-12 02:46+0100\n"
+"POT-Creation-Date: 2021-06-12 02:42+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,7 +16,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: .\env\Lib\site-packages\argcomplete\my_argparse.py:127
 #: .\env\Lib\site-packages\argparse.py:1821
@@ -1492,39 +1492,39 @@ msgstr ""
 
 #: .\root\forms.py:14 .\root\forms.py:22
 msgid "First name"
-msgstr "Prénom"
+msgstr ""
 
 #: .\root\forms.py:15 .\root\forms.py:24
 msgid "Last name"
-msgstr "Nom"
+msgstr ""
 
 #: .\root\forms.py:16 .\root\forms.py:25
 msgid "Mail address"
-msgstr "Adresse mail"
+msgstr ""
 
 #: .\root\forms.py:17 .\root\forms.py:23
 msgid "Phone number"
-msgstr "Mobile"
+msgstr ""
 
 #: .\root\forms.py:18
 msgid "Interested by"
-msgstr "Interessé par"
+msgstr ""
 
 #: .\root\forms.py:19
 msgid "Your message"
-msgstr "Votre message"
+msgstr ""
 
 #: .\root\forms.py:26
 msgid "Type your message here"
-msgstr "Tapez votre message ici"
+msgstr ""
 
 #: .\root\templates\base.html:122 .\root\templates\base.html:148
 msgid "Home"
-msgstr "Accueil"
+msgstr ""
 
 #: .\root\templates\base.html:124 .\root\templates\base.html:150
 msgid "Our offers"
-msgstr "Nos offres"
+msgstr ""
 
 #: .\root\templates\base.html:127 .\root\templates\base.html:153
 #, python-format
@@ -1541,62 +1541,462 @@ msgstr ""
 
 #: .\root\templates\base.html:140
 msgid "CURIOUS? Get a free quote now."
-msgstr "CURIEUX? Obtenez un devis gratuit maintenant."
+msgstr ""
 
 #: .\root\templates\base.html:141
 msgid "Get a quote"
-msgstr "Obtenez un devis"
+msgstr ""
 
 #: .\root\templates\base.html:146
 msgid "Navigation"
-msgstr "Accès rapide"
+msgstr ""
 
 #: .\root\templates\base.html:162
 msgid "Frequent searches"
-msgstr "Recherches fréquentes"
+msgstr ""
 
 #: .\root\templates\base.html:165
 #, python-format
 msgid "%(link_title)s"
 msgstr ""
+msgid "Agence de communication au Maroc"
+msgstr "Communication agency in Morocco"
+
+msgid "Agence de communication à Casablanca"
+msgstr "Communication agency in Casablanca"
+
+msgid "Agence de communication à Rabat"
+msgstr "Communication agency in Rabat"
+
+msgid "Agence de communication à Tanger"
+msgstr "Communication agency in Tangier"
+
+msgid "Agence de communication à Marrakech"
+msgstr "Communication agency in Marrakech"
+
+msgid "Agence de communication à Agadir"
+msgstr "Communication agency in Agadir"
+
+msgid "Agence de communication à Fes"
+msgstr "Communication agency in Fes"
+
+msgid "Agence marketing digital au Maroc"
+msgstr "Digital marketing agency in Morocco"
+
+msgid "Agence marketing digital à Casablanca"
+msgstr "Digital marketing agency in Casablanca"
+
+msgid "Agence marketing digital à Rabat"
+msgstr "Digital marketing agency in Rabat"
+
+msgid "Agence marketing digital à Tanger"
+msgstr "Digital marketing agency in Tangier"
+
+msgid "Agence marketing digital à Marrakech"
+msgstr "Digital marketing agency in Marrakech"
+
+msgid "Agence marketing digital à Agadir"
+msgstr "Digital marketing agency in Agadir"
+
+msgid "Agence marketing digital à Fes"
+msgstr "Digital marketing agency in Fes"
+
+msgid "Agence web au Maroc"
+msgstr "Web agency in Morocco"
+
+msgid "Agence web à Casablanca"
+msgstr "Web agency in Casablanca"
+
+msgid "Agence web à Rabat"
+msgstr "Web agency in Rabat"
+
+msgid "Agence web à Tanger"
+msgstr "Web agency in Tangier"
+
+msgid "Agence web à Marrakech"
+msgstr "Web agency in Marrakech"
+
+msgid "Agence web à Agadir"
+msgstr "Web agency in Agadir"
+
+msgid "Agence web à Fes"
+msgstr "Web agency in Fes"
+
+msgid "Création site web au Maroc"
+msgstr "Website creation in Morocco"
+
+msgid "Création site web à Casablanca"
+msgstr "Website creation in Casablanca"
+
+msgid "Création site web à Rabat"
+msgstr "Website creation in Rabat"
+
+msgid "Création site web à Tanger"
+msgstr "Website creation in Tangier"
+
+msgid "Création site web à Marrakech"
+msgstr "Website creation in Marrakech"
+
+msgid "Création site web à Agadir"
+msgstr "Website creation in Agadir"
+
+msgid "Création site web à Fes"
+msgstr "Website creation in Fes"
+
+msgid "Seo (référencement naturel) au Maroc"
+msgstr "SEO (natural referencing) in Morocco"
+
+msgid "Seo (référencement naturel) à Casablanca"
+msgstr "SEO (natural referencing) in Casablanca"
+
+msgid "Seo (référencement naturel) à Rabat"
+msgstr "SEO (natural referencing) in Rabat"
+
+msgid "Seo (référencement naturel) à Tanger"
+msgstr "SEO (natural referencing) in Tangier"
+
+msgid "Seo (référencement naturel) à Marrakech"
+msgstr "SEO (natural referencing) in Marrakech"
+
+msgid "Seo (référencement naturel) à Agadir"
+msgstr "SEO (natural referencing) in Agadir"
+
+msgid "Seo (référencement naturel) à Fes"
+msgstr "SEO (natural referencing) in Fes"
+
+msgid "Sea (référencement payant) au Maroc"
+msgstr "Sea (paid referencing) in Morocco"
+
+msgid "Sea (référencement payant) à Casablanca"
+msgstr "Sea (paid referencing) in Casablanca"
+
+msgid "Sea (référencement payant) à Rabat"
+msgstr "Sea (paid referencing) in Rabat"
+
+msgid "Sea (référencement payant) à Tanger"
+msgstr "Sea (paid referencing) in Tangier"
+
+msgid "Sea (référencement payant) à Marrakech"
+msgstr "Sea (paid referencing) in Marrakech"
+
+msgid "Sea (référencement payant) à Agadir"
+msgstr "Sea (paid referencing) in Agadir"
+
+msgid "Sea (référencement payant) à Fes"
+msgstr "Sea (paid referencing) in Fes"
+
+msgid "Sem au Maroc"
+msgstr "Sem in Morocco"
+
+msgid "Sem à Casablanca"
+msgstr "Sem in Casablanca"
+
+msgid "Sem à Rabat"
+msgstr "Sem in Rabat"
+
+msgid "Sem à Tanger"
+msgstr "Sem in Tangier"
+
+msgid "Sem à Marrakech"
+msgstr "Sem in Marrakech"
+
+msgid "Sem à Agadir"
+msgstr "Sem in Agadir"
+
+msgid "Sem à Fes"
+msgstr "Sem in Fes"
+
+msgid "Social media au Maroc"
+msgstr "Social media in Morocco"
+
+msgid "Social media à Casablanca"
+msgstr "Social media in Casablanca"
+
+msgid "Social media à Rabat"
+msgstr "Social media in Rabat"
+
+msgid "Social media à Tanger"
+msgstr "Social media in Tangier"
+
+msgid "Social media à Marrakech"
+msgstr "Social media in Marrakech"
+
+msgid "Social media à Agadir"
+msgstr "Social media in Agadir"
+
+msgid "Social media à Fes"
+msgstr "Social media in Fes"
+
+msgid "infographie au Maroc"
+msgstr "infographics in Morocco"
+
+msgid "infographie à Casablanca"
+msgstr "infographics in Casablanca"
+
+msgid "infographie à Rabat"
+msgstr "infographics in Rabat"
+
+msgid "infographie à Tanger"
+msgstr "infographic in Tangier"
+
+msgid "infographie à Marrakech"
+msgstr "infographics in Marrakech"
+
+msgid "infographie à Agadir"
+msgstr "infographic in Agadir"
+
+msgid "infographie à Fes"
+msgstr "infographic in Fes"
+
+msgid "stratégie digitale au Maroc"
+msgstr "digital strategy in Morocco"
+
+msgid "stratégie digitale à Casablanca"
+msgstr "digital strategy in Casablanca"
+
+msgid "stratégie digitale à Rabat"
+msgstr "digital strategy in Rabat"
+
+msgid "stratégie digitale à Tanger"
+msgstr "digital strategy in Tangier"
+
+msgid "stratégie digitale à Marrakech"
+msgstr "digital strategy in Marrakech"
+
+msgid "stratégie digitale à Agadir"
+msgstr "digital strategy in Agadir"
+
+msgid "stratégie digitale à Fes"
+msgstr "digital strategy in Fes"
+
+msgid "Marketing digital au Maroc"
+msgstr "Digital Marketing in Morocco"
+
+msgid "Marketing digital à Casablanca"
+msgstr "Digital Marketing in Casablanca"
+
+msgid "Marketing digital à Rabat"
+msgstr "Digital Marketing in Rabat"
+
+msgid "Marketing digital à Tanger"
+msgstr "Digital Marketing in Tangier"
+
+msgid "Marketing digital à Marrakech"
+msgstr "Digital Marketing in Marrakech"
+
+msgid "Marketing digital à Agadir"
+msgstr "Digital Marketing in Agadir"
+
+msgid "Marketing digital à Fes"
+msgstr "Digital Marketing in Fes"
+
+msgid "Rédaction web au Maroc"
+msgstr "Web writing in Morocco"
+
+msgid "Rédaction web à Casablanca"
+msgstr "Web writing in Casablanca"
+
+msgid "Rédaction web à Rabat"
+msgstr "Web writing in Rabat"
+
+msgid "Rédaction web à Tanger"
+msgstr "Web writing in Tangier"
+
+msgid "Rédaction web à Marrakech"
+msgstr "Web writing in Marrakech"
+
+msgid "Rédaction web à Agadir"
+msgstr "Web writing in Agadir"
+
+msgid "Rédaction web à Fes"
+msgstr "Web writing in Fes"
+
+msgid "Community Management au Maroc"
+msgstr "Community Management in Morocco"
+
+msgid "Community Management à Casablanca"
+msgstr "Community Management in Casablanca"
+
+msgid "Community Management à Rabat"
+msgstr "Community Management in Rabat"
+
+msgid "Community Management à Tanger"
+msgstr "Community Management in Tangier"
+
+msgid "Community Management à Marrakech"
+msgstr "Community Management in Marrakech"
+
+msgid "Community Management à Agadir"
+msgstr "Community Management in Agadir"
+
+msgid "Community Management à Fes"
+msgstr "Community Management in Fes"
+
+msgid "Agence E-Réputation au Maroc"
+msgstr "E-Reputation Agency in Morocco"
+
+msgid "Agence E-Réputation à Casablanca"
+msgstr "E-Reputation Agency in Casablanca"
+
+msgid "Agence E-Réputation à Rabat"
+msgstr "E-Reputation Agency in Rabat"
+
+msgid "Agence E-Réputation à Tanger"
+msgstr "E-Reputation Agency in Tangier"
+
+msgid "Agence E-Réputation à Marrakech"
+msgstr "E-Reputation Agency in Marrakech"
+
+msgid "Agence E-Réputation à Agadir"
+msgstr "E-Reputation Agency in Agadir"
+
+msgid "Agence E-Réputation à Fes"
+msgstr "E-Reputation Agency in Fes"
+
+msgid "Application mobile au Maroc"
+msgstr "Mobile application in Morocco"
+
+msgid "Application mobile à Casablanca"
+msgstr "Mobile application in Casablanca"
+
+msgid "Application mobile à Rabat"
+msgstr "Mobile application in Rabat"
+
+msgid "Application mobile à Tanger"
+msgstr "Mobile application in Tangier"
+
+msgid "Application mobile à Marrakech"
+msgstr "Mobile application in Marrakech"
+
+msgid "Application mobile à Agadir"
+msgstr "Mobile application in Agadir"
+
+msgid "Application mobile à Fes"
+msgstr "Mobile application in Fes"
+
+msgid "Site e-commerce au Maroc"
+msgstr "E-commerce site in Morocco"
+
+msgid "Site e-commerce à Casablanca"
+msgstr "E-commerce site in Casablanca"
+
+msgid "Site e-commerce à Rabat"
+msgstr "E-commerce site in Rabat"
+
+msgid "Site e-commerce à Tanger"
+msgstr "E-commerce site in Tangier"
+
+msgid "Site e-commerce à Marrakech"
+msgstr "E-commerce site in Marrakech"
+
+msgid "Site e-commerce à Agadir"
+msgstr "E-commerce site in Agadir"
+
+msgid "Site e-commerce à Fes"
+msgstr "E-commerce site in Fes"
+
+msgid "E-mailing au Maroc"
+msgstr "E-mailing in Morocco"
+
+msgid "E-mailing à Casablanca"
+msgstr "E-mailing in Casablanca"
+
+msgid "E-mailing à Rabat"
+msgstr "E-mailing in Rabat"
+
+msgid "E-mailing à Tanger"
+msgstr "E-mailing in Tangier"
+
+msgid "E-mailing à Marrakech"
+msgstr "E-mailing in Marrakech"
+
+msgid "E-mailing à Agadir"
+msgstr "E-mailing in Agadir"
+
+msgid "E-mailing à Fes"
+msgstr "E-mailing in Fes"
+
+msgid "Identité visuelle au Maroc"
+msgstr "Visual identity in Morocco"
+
+msgid "Identité visuelle à Casablanca"
+msgstr "Visual identity in Casablanca"
+
+msgid "Identité visuelle à Rabat"
+msgstr "Visual identity in Rabat"
+
+msgid "Identité visuelle à Tanger"
+msgstr "Visual identity in Tangier"
+
+msgid "Identité visuelle à Marrakech"
+msgstr "Visual identity in Marrakech"
+
+msgid "Identité visuelle à Agadir"
+msgstr "Visual identity in Agadir"
+
+msgid "Identité visuelle à Fes"
+msgstr "Visual identity in Fes"
+
+msgid "Agence référencement au Maroc"
+msgstr "SEO agency in Morocco"
+
+msgid "Agence référencement à Casablanca"
+msgstr "SEO agency in Casablanca"
+
+msgid "Agence référencement à Rabat"
+msgstr "SEO agency in Rabat"
+
+msgid "Agence référencement à Tanger"
+msgstr "SEO agency in Tangier"
+
+msgid "Agence référencement à Marrakech"
+msgstr "SEO agency in Marrakech"
+
+msgid "Agence référencement à Agadir"
+msgstr "SEO agency in Agadir"
+
+msgid "Agence référencement à Fes"
+msgstr "SEO agency in Fes"
+
+
 
 #: .\root\templates\contact-footer.html:9 .\root\templates\contact.html:15
 msgid "Message sent"
-msgstr "Message envoyé"
+msgstr ""
 
 #: .\root\templates\contact-footer.html:9 .\root\templates\contact.html:15
 msgid "The form has been submited successfully."
-msgstr "Le formulaire est envoyé avec succès"
+msgstr ""
 
 #: .\root\templates\contact-footer.html:16 .\root\templates\contact.html:22
 msgid "Contact us"
-msgstr "Contactez-nous"
+msgstr ""
 
 #: .\root\templates\contact-footer.html:17 .\root\templates\contact.html:23
 msgid ""
 "Send us a mail for more information, we will get back to you as soon as "
 "possible to answer your welcome questions!"
-msgstr "Envoyez-nous un mail pour plus d'informations, nous vous répondrons dans les plus brefs délais pour répondre à vos questions bienvenues ! "
+msgstr ""
 
 #: .\root\templates\contact-footer.html:30 .\root\templates\contact.html:36
 msgid "Submit"
-msgstr "Envoyer"
+msgstr ""
 
 #: .\root\templates\index.html:49
 msgid "your future"
-msgstr "Votre futur"
+msgstr ""
 
 #: .\root\templates\index.html:49
 msgid "in our hands."
-msgstr "entre nos mains."
+msgstr ""
 
 #: .\root\templates\index.html:52
 msgid "Xerixy gives you vision to a successful business"
-msgstr "Xerixy vous donne la vision d'une entreprise prospère"
+msgstr ""
 
 #: .\root\templates\index.html:61
 msgid "about us"
-msgstr "à propos de nous"
+msgstr ""
 
 #: .\root\templates\index.html:65
 msgid ""
@@ -1607,22 +2007,14 @@ msgid ""
 "technics you will grow with us.\n"
 "        "
 msgstr ""
-"Xerixy a pour vision de donner aux meilleurs talents d'entrepreneur la "
-"liberté d'améliorer les entreprises numériques, une entreprise à la fois, et "
-"de générer une croissance des ventes numériques pour les entreprises, de A à "
-"Z. Grâce à nos techniques performantes, vous grandirez avec nous. "
-
-#: .\root\templates\index.html:71
-msgid "Order now"
-msgstr "Commandez maintenant"
 
 #: .\root\templates\index.html:80
 msgid "our mission"
-msgstr "notre mission"
+msgstr ""
 
 #: .\root\templates\index.html:87
 msgid "Project study"
-msgstr "Etude de projet"
+msgstr ""
 
 #: .\root\templates\index.html:89
 msgid ""
@@ -1633,9 +2025,6 @@ msgid ""
 "juice!\n"
 "        "
 msgstr ""
-"Nous avons la meilleure équipe de conception qualifiée et talentueuse et qui "
-"exaucera votre souhait dans un modèle numérique accrocheur prêt à être "
-"codé ! "
 
 #: .\root\templates\index.html:99
 msgid "sketching /UI"
@@ -1649,9 +2038,6 @@ msgid ""
 "        your wish into a digital eye-catching template ready to be coded!\n"
 "        "
 msgstr ""
-"Nous avons l'équipe de conception la plus qualifiée et la plus talentueuse "
-"et qui exaucera votre souhait dans un modèle numérique accrocheur prêt à "
-"être codé !"
 
 #: .\root\templates\index.html:111
 msgid "Conception"
@@ -1665,13 +2051,10 @@ msgid ""
 "product\n"
 "        "
 msgstr ""
-"Nous avons sélectionné les programmeurs les plus brillants qui travaillent "
-"avec les meilleurs systèmes de programmation pour vous offrir un code propre "
-"et un produit sans bogues"
 
 #: .\root\templates\index.html:123
 msgid "Delivery"
-msgstr "Livraison "
+msgstr ""
 
 #: .\root\templates\index.html:125
 msgid ""
@@ -1685,14 +2068,10 @@ msgid ""
 "        and profit\n"
 "        "
 msgstr ""
-"La livraison avec un cadeau, c'est ce dont tout le monde a besoin, notre "
-"cadeau c'est que notre spécialiste SEO suivra votre croissance visuelle dans "
-"google et vous aidera à être trouvé dans les premières pages de recherche "
-"google pour augmenter votre trafic et votre profit "
 
 #: .\root\templates\index.html:137
 msgid "Search Engine Optimization"
-msgstr "optimisation du moteur de recherche "
+msgstr ""
 
 #: .\root\templates\index.html:139
 msgid ""
@@ -1704,415 +2083,3 @@ msgid ""
 "        profit\n"
 "        "
 msgstr ""
-"Notre spécialiste de l'optimisation des moteurs de recherche SEO vous aidera "
-"après la livraison à atteindre une croissance visuelle et à obtenir plus de "
-"trafic sur google et de profit "
-
-#~ msgid "Communication agency in Morocco"
-#~ msgstr "Agence de communication au Maroc"
-
-#~ msgid "Communication agency in Casablanca"
-#~ msgstr "Agence de communication à Casablanca"
-
-#~ msgid "Communication agency in Rabat"
-#~ msgstr "Agence de communication à Rabat"
-
-#~ msgid "Communication agency in Tangier"
-#~ msgstr "Agence de communication à Tanger"
-
-#~ msgid "Communication agency in Marrakech"
-#~ msgstr "Agence de communication à Marrakech"
-
-#~ msgid "Communication agency in Agadir"
-#~ msgstr "Agence de communication à Agadir"
-
-#~ msgid "Communication agency in Fes"
-#~ msgstr "Agence de communication à Fes"
-
-#~ msgid "Digital marketing agency in Morocco"
-#~ msgstr "Agence marketing digital au Maroc"
-
-#~ msgid "Digital marketing agency in Casablanca"
-#~ msgstr "Agence marketing digital à Casablanca"
-
-#~ msgid "Digital marketing agency in Rabat"
-#~ msgstr "Agence marketing digital à Rabat"
-
-#~ msgid "Digital marketing agency in Tangier"
-#~ msgstr "Agence marketing digital à Tanger"
-
-#~ msgid "Digital marketing agency in Marrakech"
-#~ msgstr "Agence marketing digital à Marrakech"
-
-#~ msgid "Digital marketing agency in Agadir"
-#~ msgstr "Agence marketing digital à Agadir"
-
-#~ msgid "Digital marketing agency in Fes"
-#~ msgstr "Agence marketing digital à Fes"
-
-#~ msgid "Web agency in Morocco"
-#~ msgstr "Agence web au Maroc"
-
-#~ msgid "Web agency in Casablanca"
-#~ msgstr "Agence web à Casablanca"
-
-#~ msgid "Web agency in Rabat"
-#~ msgstr "Agence web à Rabat"
-
-#~ msgid "Web agency in Tangier"
-#~ msgstr "Agence web à Tanger"
-
-#~ msgid "Web agency in Marrakech"
-#~ msgstr "Agence web à Marrakech"
-
-#~ msgid "Web agency in Agadir"
-#~ msgstr "Agence web à Agadir"
-
-#~ msgid "Web agency in Fes"
-#~ msgstr "Agence web à Fes"
-
-#~ msgid "Website creation in Morocco"
-#~ msgstr "Création site web au Maroc"
-
-#~ msgid "Website creation in Casablanca"
-#~ msgstr "Création site web à Casablanca"
-
-#~ msgid "Website creation in Rabat"
-#~ msgstr "Création site web à Rabat"
-
-#~ msgid "Website creation in Tangier"
-#~ msgstr "Création site web à Tanger"
-
-#~ msgid "Website creation in Marrakech"
-#~ msgstr "Création site web à Marrakech"
-
-#~ msgid "Website creation in Agadir"
-#~ msgstr "Création site web à Agadir"
-
-#~ msgid "Website creation in Fes"
-#~ msgstr "Création site web à Fes"
-
-#~ msgid "SEO (natural referencing) in Morocco"
-#~ msgstr "Seo (référencement naturel) au Maroc"
-
-#~ msgid "SEO (natural referencing) in Casablanca"
-#~ msgstr "Seo (référencement naturel) à Casablanca"
-
-#~ msgid "SEO (natural referencing) in Rabat"
-#~ msgstr "Seo (référencement naturel) à Rabat"
-
-#~ msgid "SEO (natural referencing) in Tangier"
-#~ msgstr "Seo (référencement naturel) à Tanger"
-
-#~ msgid "SEO (natural referencing) in Marrakech"
-#~ msgstr "Seo (référencement naturel) à Marrakech"
-
-#~ msgid "SEO (natural referencing) in Agadir"
-#~ msgstr "Seo (référencement naturel) à Agadir"
-
-#~ msgid "SEO (natural referencing) in Fes"
-#~ msgstr "Seo (référencement naturel) à Fes"
-
-#~ msgid "Sea (paid referencing) in Morocco"
-#~ msgstr "Sea (référencement payant) au Maroc"
-
-#~ msgid "Sea (paid referencing) in Casablanca"
-#~ msgstr "Sea (référencement payant) à Casablanca"
-
-#~ msgid "Sea (paid referencing) in Rabat"
-#~ msgstr "Sea (référencement payant) à Rabat"
-
-#~ msgid "Sea (paid referencing) in Tangier"
-#~ msgstr "Sea (référencement payant) à Tanger"
-
-#~ msgid "Sea (paid referencing) in Marrakech"
-#~ msgstr "Sea (référencement payant) à Marrakech"
-
-#~ msgid "Sea (paid referencing) in Agadir"
-#~ msgstr "Sea (référencement payant) à Agadir"
-
-#~ msgid "Sea (paid referencing) in Fes"
-#~ msgstr "Sea (référencement payant) à Fes"
-
-#~ msgid "Sem in Morocco"
-#~ msgstr "Sem au Maroc"
-
-#~ msgid "Sem in Casablanca"
-#~ msgstr "Sem à Casablanca"
-
-#~ msgid "Sem in Rabat"
-#~ msgstr "Sem à Rabat"
-
-#~ msgid "Sem in Tangier"
-#~ msgstr "Sem à Tanger"
-
-#~ msgid "Sem in Marrakech"
-#~ msgstr "Sem à Marrakech"
-
-#~ msgid "Sem in Agadir"
-#~ msgstr "Sem à Agadir"
-
-#~ msgid "Sem in Fes"
-#~ msgstr "Sem à Fes"
-
-#~ msgid "Social media in Morocco"
-#~ msgstr "Social media au Maroc"
-
-#~ msgid "Social media in Casablanca"
-#~ msgstr "Social media à Casablanca"
-
-#~ msgid "Social media in Rabat"
-#~ msgstr "Social media à Rabat"
-
-#~ msgid "Social media in Tangier"
-#~ msgstr "Social media à Tanger"
-
-#~ msgid "Social media in Marrakech"
-#~ msgstr "Social media à Marrakech"
-
-#~ msgid "Social media in Agadir"
-#~ msgstr "Social media à Agadir"
-
-#~ msgid "Social media in Fes"
-#~ msgstr "Social media à Fes"
-
-#~ msgid "infographics in Morocco"
-#~ msgstr "infographie au Maroc"
-
-#~ msgid "infographics in Casablanca"
-#~ msgstr "infographie à Casablanca"
-
-#~ msgid "infographics in Rabat"
-#~ msgstr "infographie à Rabat"
-
-#~ msgid "infographic in Tangier"
-#~ msgstr "infographie à Tanger"
-
-#~ msgid "infographics in Marrakech"
-#~ msgstr "infographie à Marrakech"
-
-#~ msgid "infographic in Agadir"
-#~ msgstr "infographie à Agadir"
-
-#~ msgid "infographic in Fes"
-#~ msgstr "infographie à Fes"
-
-#~ msgid "digital strategy in Morocco"
-#~ msgstr "stratégie digitale au Maroc"
-
-#~ msgid "digital strategy in Casablanca"
-#~ msgstr "stratégie digitale à Casablanca"
-
-#~ msgid "digital strategy in Rabat"
-#~ msgstr "stratégie digitale à Rabat"
-
-#~ msgid "digital strategy in Tangier"
-#~ msgstr "stratégie digitale à Tanger"
-
-#~ msgid "digital strategy in Marrakech"
-#~ msgstr "stratégie digitale à Marrakech"
-
-#~ msgid "digital strategy in Agadir"
-#~ msgstr "stratégie digitale à Agadir"
-
-#~ msgid "digital strategy in Fes"
-#~ msgstr "stratégie digitale à Fes"
-
-#~ msgid "Digital Marketing in Morocco"
-#~ msgstr "Marketing digital au Maroc"
-
-#~ msgid "Digital Marketing in Casablanca"
-#~ msgstr "Marketing digital à Casablanca"
-
-#~ msgid "Digital Marketing in Rabat"
-#~ msgstr "Marketing digital à Rabat"
-
-#~ msgid "Digital Marketing in Tangier"
-#~ msgstr "Marketing digital à Tanger"
-
-#~ msgid "Digital Marketing in Marrakech"
-#~ msgstr "Marketing digital à Marrakech"
-
-#~ msgid "Digital Marketing in Agadir"
-#~ msgstr "Marketing digital à Agadir"
-
-#~ msgid "Digital Marketing in Fes"
-#~ msgstr "Marketing digital à Fes"
-
-#~ msgid "Web writing in Morocco"
-#~ msgstr "Rédaction web au Maroc"
-
-#~ msgid "Web writing in Casablanca"
-#~ msgstr "Rédaction web à Casablanca"
-
-#~ msgid "Web writing in Rabat"
-#~ msgstr "Rédaction web à Rabat"
-
-#~ msgid "Web writing in Tangier"
-#~ msgstr "Rédaction web à Tanger"
-
-#~ msgid "Web writing in Marrakech"
-#~ msgstr "Rédaction web à Marrakech"
-
-#~ msgid "Web writing in Agadir"
-#~ msgstr "Rédaction web à Agadir"
-
-#~ msgid "Web writing in Fes"
-#~ msgstr "Rédaction web à Fes"
-
-#~ msgid "Community Management in Morocco"
-#~ msgstr "Community Management au Maroc"
-
-#~ msgid "Community Management in Casablanca"
-#~ msgstr "Community Management à Casablanca"
-
-#~ msgid "Community Management in Rabat"
-#~ msgstr "Community Management à Rabat"
-
-#~ msgid "Community Management in Tangier"
-#~ msgstr "Community Management à Tanger"
-
-#~ msgid "Community Management in Marrakech"
-#~ msgstr "Community Management à Marrakech"
-
-#~ msgid "Community Management in Agadir"
-#~ msgstr "Community Management à Agadir"
-
-#~ msgid "Community Management in Fes"
-#~ msgstr "Community Management à Fes"
-
-#~ msgid "E-Reputation Agency in Morocco"
-#~ msgstr "Agence E-Réputation au Maroc"
-
-#~ msgid "E-Reputation Agency in Casablanca"
-#~ msgstr "Agence E-Réputation à Casablanca"
-
-#~ msgid "E-Reputation Agency in Rabat"
-#~ msgstr "Agence E-Réputation à Rabat"
-
-#~ msgid "E-Reputation Agency in Tangier"
-#~ msgstr "Agence E-Réputation à Tanger"
-
-#~ msgid "E-Reputation Agency in Marrakech"
-#~ msgstr "Agence E-Réputation à Marrakech"
-
-#~ msgid "E-Reputation Agency in Agadir"
-#~ msgstr "Agence E-Réputation à Agadir"
-
-#~ msgid "E-Reputation Agency in Fes"
-#~ msgstr "Agence E-Réputation à Fes"
-
-#~ msgid "Mobile application in Morocco"
-#~ msgstr "Application mobile au Maroc"
-
-#~ msgid "Mobile application in Casablanca"
-#~ msgstr "Application mobile à Casablanca"
-
-#~ msgid "Mobile application in Rabat"
-#~ msgstr "Application mobile à Rabat"
-
-#~ msgid "Mobile application in Tangier"
-#~ msgstr "Application mobile à Tanger"
-
-#~ msgid "Mobile application in Marrakech"
-#~ msgstr "Application mobile à Marrakech"
-
-#~ msgid "Mobile application in Agadir"
-#~ msgstr "Application mobile à Agadir"
-
-#~ msgid "Mobile application in Fes"
-#~ msgstr "Application mobile à Fes"
-
-#~ msgid "E-commerce site in Morocco"
-#~ msgstr "Site e-commerce au Maroc"
-
-#~ msgid "E-commerce site in Casablanca"
-#~ msgstr "Site e-commerce à Casablanca"
-
-#~ msgid "E-commerce site in Rabat"
-#~ msgstr "Site e-commerce à Rabat"
-
-#~ msgid "E-commerce site in Tangier"
-#~ msgstr "Site e-commerce à Tanger"
-
-#~ msgid "E-commerce site in Marrakech"
-#~ msgstr "Site e-commerce à Marrakech"
-
-#~ msgid "E-commerce site in Agadir"
-#~ msgstr "Site e-commerce à Agadir"
-
-#~ msgid "E-commerce site in Fes"
-#~ msgstr "Site e-commerce à Fes"
-
-#~ msgid "E-mailing in Morocco"
-#~ msgstr "E-mailing au Maroc"
-
-#~ msgid "E-mailing in Casablanca"
-#~ msgstr "E-mailing à Casablanca"
-
-#~ msgid "E-mailing in Rabat"
-#~ msgstr "E-mailing à Rabat"
-
-#~ msgid "E-mailing in Tangier"
-#~ msgstr "E-mailing à Tanger"
-
-#~ msgid "E-mailing in Marrakech"
-#~ msgstr "E-mailing à Marrakech"
-
-#~ msgid "E-mailing in Agadir"
-#~ msgstr "E-mailing à Agadir"
-
-#~ msgid "E-mailing in Fes"
-#~ msgstr "E-mailing à Fes"
-
-#~ msgid "Visual identity in Morocco"
-#~ msgstr "Identité visuelle au Maroc"
-
-#~ msgid "Visual identity in Casablanca"
-#~ msgstr "Identité visuelle à Casablanca"
-
-#~ msgid "Visual identity in Rabat"
-#~ msgstr "Identité visuelle à Rabat"
-
-#~ msgid "Visual identity in Tangier"
-#~ msgstr "Identité visuelle à Tanger"
-
-#~ msgid "Visual identity in Marrakech"
-#~ msgstr "Identité visuelle à Marrakech"
-
-#~ msgid "Visual identity in Agadir"
-#~ msgstr "Identité visuelle à Agadir"
-
-#~ msgid "Visual identity in Fes"
-#~ msgstr "Identité visuelle à Fes"
-
-#~ msgid "SEO agency in Morocco"
-#~ msgstr "Agence référencement au Maroc"
-
-#~ msgid "SEO agency in Casablanca"
-#~ msgstr "Agence référencement à Casablanca"
-
-#~ msgid "SEO agency in Rabat"
-#~ msgstr "Agence référencement à Rabat"
-
-#~ msgid "SEO agency in Tangier"
-#~ msgstr "Agence référencement à Tanger"
-
-#~ msgid "SEO agency in Marrakech"
-#~ msgstr "Agence référencement à Marrakech"
-
-#~ msgid "SEO agency in Agadir"
-#~ msgstr "Agence référencement à Agadir"
-
-#~ msgid "SEO agency in Fes"
-#~ msgstr "Agence référencement à Fes"
-
-#~ msgid "ABOUT"
-#~ msgstr "à propos"
-
-#~ msgid ""
-#~ "Send us a mail for more informations, we will get back to you as soon as "
-#~ "possible to answer your welcomed questions !"
-#~ msgstr ""
-#~ "Envoyez-nous un mail pour plus d'informations, nous vous répondrons dans "
-#~ "les plus brefs délais pour répondre à vos questions bienvenues ! "

@@ -33,6 +33,7 @@ urlpatterns = [
     path('adminX/', admin.site.urls),
      path('tinymce/', include('tinymce.urls')),
     path('api/', include('root.urls')),
+    path('i18n/', include('django.conf.urls.i18n')),
 ]
 urlpatterns +=i18n_patterns(
     
@@ -53,5 +54,5 @@ urlpatterns +=i18n_patterns(
     path('todos/', include('tasks.urls')),
     path('<str:page_url>/', root_view.page_view, name="page"),
     path('sitemap.xml', sitemap, {'sitemaps': sitemaps}, name='django.contrib.sitemaps.views.sitemap'),
-    prefix_default_language=False,
+    # prefix_default_language=False,
 )

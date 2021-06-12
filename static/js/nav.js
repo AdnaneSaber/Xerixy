@@ -38,3 +38,12 @@ let fqw = $("#seoL").height();
 if (fqw >= 200) {
   $("#seoL").css("overflow-y", "scroll");
 }
+$("#languageToggler").click(() => {
+  let languages = $("#hiddenLanguages");
+  let len = $("#hiddenLanguages button").length;
+  if (languages.css("height") === "0px") {
+    languages.css("height", len * 25 + "px");
+  } else {
+    languages.css("height", "0px");
+  }
+});
