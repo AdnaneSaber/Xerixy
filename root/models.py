@@ -88,6 +88,10 @@ class New(models.Model):
         upload_to=assetSaver, default='/no_image.jpg')
     post_time = models.DateTimeField(auto_now_add=True)
 
+    post_meta_title = models.CharField(blank=True,
+                                          max_length=60)
+    post_meta_description = models.CharField(blank=True,
+                                                max_length=160)
     def save(self, *args, **kwargs):
         if not self.post_url:
             self.post_url = urlFormater(self.post_title)
@@ -112,7 +116,7 @@ class Combination(models.Model):
         p_c = []
         for i in range(len(locations)):
             p_c.append(f"{prepositions[i]} {locations[i]}")
-        SeoLink.objects.all().delete()
+        # SeoLink.objects.all().delete()
         for y in keywords:
             for j in p_c:
                 SeoLink.objects.create(title=f"{y} {j}")

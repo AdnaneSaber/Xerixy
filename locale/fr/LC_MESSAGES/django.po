@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-06-12 02:46+0100\n"
+"POT-Creation-Date: 2021-06-13 19:52+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,6 +17,14 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: .\cp\settings.py:150
+msgid "en"
+msgstr ""
+
+#: .\cp\settings.py:151
+msgid "fr"
+msgstr ""
 
 #: .\env\Lib\site-packages\argcomplete\my_argparse.py:127
 #: .\env\Lib\site-packages\argparse.py:1821
@@ -1490,115 +1498,412 @@ msgctxt "stick"
 msgid "club"
 msgstr ""
 
-#: .\root\forms.py:14 .\root\forms.py:22
+#: .\root\forms.py:15 .\root\forms.py:23
 msgid "First name"
 msgstr "Prénom"
 
-#: .\root\forms.py:15 .\root\forms.py:24
+#: .\root\forms.py:16 .\root\forms.py:25
 msgid "Last name"
 msgstr "Nom"
 
-#: .\root\forms.py:16 .\root\forms.py:25
+#: .\root\forms.py:17 .\root\forms.py:26
 msgid "Mail address"
 msgstr "Adresse mail"
 
-#: .\root\forms.py:17 .\root\forms.py:23
+#: .\root\forms.py:18 .\root\forms.py:24
 msgid "Phone number"
 msgstr "Mobile"
 
-#: .\root\forms.py:18
+#: .\root\forms.py:19
 msgid "Interested by"
 msgstr "Interessé par"
 
-#: .\root\forms.py:19
+#: .\root\forms.py:20
 msgid "Your message"
 msgstr "Votre message"
 
-#: .\root\forms.py:26
+#: .\root\forms.py:27
 msgid "Type your message here"
 msgstr "Tapez votre message ici"
 
-#: .\root\templates\base.html:122 .\root\templates\base.html:148
+#: .\root\templates\base.html:124 .\root\templates\base.html:210
+#: .\root\templates\index.html:11
 msgid "Home"
 msgstr "Accueil"
 
-#: .\root\templates\base.html:124 .\root\templates\base.html:150
+#: .\root\templates\base.html:126 .\root\templates\base.html:212
 msgid "Our offers"
 msgstr "Nos offres"
 
-#: .\root\templates\base.html:127 .\root\templates\base.html:153
+#: .\root\templates\base.html:130 .\root\templates\base.html:216
 #, python-format
 msgid "%(page_title)s"
 msgstr ""
 
-#: .\root\templates\base.html:130 .\root\templates\base.html:156
+#: .\root\templates\base.html:134 .\root\templates\base.html:220
 msgid "Blog"
 msgstr ""
 
-#: .\root\templates\base.html:132 .\root\templates\base.html:158
+#: .\root\templates\base.html:136 .\root\templates\base.html:222
 msgid "Contact"
 msgstr ""
 
-#: .\root\templates\base.html:140
+#: .\root\templates\base.html:142 .\root\templates\base.html:147
+msgid "Pick your language"
+msgstr "Choisissez votre langue"
+
+#: .\root\templates\base.html:195 .\root\templates\cookies.html:8
+msgid "Cookie Policy for Xerixy"
+msgstr ""
+
+#: .\root\templates\base.html:196
+msgid "This is the Cookie Policy for Xerixy, for more informations"
+msgstr "Politique de cookies pour Xerixy"
+
+#: .\root\templates\base.html:197
+msgid "read more"
+msgstr "Lire la suite"
+
+#: .\root\templates\base.html:198
+msgid "Close this tab and scroll down to accept."
+msgstr "Fermez cet onglet et faites défiler vers le bas pour accepter."
+
+#: .\root\templates\base.html:202
 msgid "CURIOUS? Get a free quote now."
 msgstr "CURIEUX? Obtenez un devis gratuit maintenant."
 
-#: .\root\templates\base.html:141
+#: .\root\templates\base.html:203
 msgid "Get a quote"
 msgstr "Obtenez un devis"
 
-#: .\root\templates\base.html:146
+#: .\root\templates\base.html:208
 msgid "Navigation"
 msgstr "Accès rapide"
 
-#: .\root\templates\base.html:162
+#: .\root\templates\base.html:226
 msgid "Frequent searches"
 msgstr "Recherches fréquentes"
 
-#: .\root\templates\base.html:165
+#: .\root\templates\base.html:230
 #, python-format
 msgid "%(link_title)s"
 msgstr ""
 
-#: .\root\templates\contact-footer.html:9 .\root\templates\contact.html:15
+#: .\root\templates\base.html:263
+msgid "Hello there, I am Cookie-Man !"
+msgstr "Bonjour, je suis Cookie-Man !"
+
+#: .\root\templates\base.html:264
+msgid "By scrolling you are accepting Xerixy's cookies"
+msgstr "En faisant défiler vous acceptez les cookies de Xerixy"
+
+#: .\root\templates\base.html:265
+msgid "My friends and I"
+msgstr "Mes amis et moi"
+
+#: .\root\templates\base.html:266
+msgid ""
+"We will not betray your privacy, it's just to ensure you better user "
+"experience, I promise cookie word"
+msgstr "Nous ne trahirons pas votre vie privée, c'est juste pour vous assurer une meilleure expérience utilisateur, promis parole de cookie"
+
+#: .\root\templates\base.html:267
+msgid "Click me to read more.."
+msgstr "Cliquez-moi pour en savoir plus.."
+
+#: .\root\templates\base.html:297
+msgid "Thank you, enjoy!"
+msgstr "Merci, profitez-en !"
+
+#: .\root\templates\contact-footer.html:8 .\root\templates\contact.html:16
 msgid "Message sent"
 msgstr "Message envoyé"
 
-#: .\root\templates\contact-footer.html:9 .\root\templates\contact.html:15
+#: .\root\templates\contact-footer.html:8 .\root\templates\contact.html:16
 msgid "The form has been submited successfully."
 msgstr "Le formulaire est envoyé avec succès"
 
-#: .\root\templates\contact-footer.html:16 .\root\templates\contact.html:22
+#: .\root\templates\contact-footer.html:15 .\root\templates\contact.html:23
 msgid "Contact us"
 msgstr "Contactez-nous"
 
-#: .\root\templates\contact-footer.html:17 .\root\templates\contact.html:23
+#: .\root\templates\contact-footer.html:16
 msgid ""
 "Send us a mail for more information, we will get back to you as soon as "
-"possible to answer your welcome questions!"
-msgstr "Envoyez-nous un mail pour plus d'informations, nous vous répondrons dans les plus brefs délais pour répondre à vos questions bienvenues ! "
+"possible to answer\n"
+"        your welcome questions!"
+msgstr ""
+"Envoyez-nous un mail pour plus d'informations, nous vous répondrons dans les "
+"plus brefs délais pour répondre à vos questions bienvenues ! "
 
-#: .\root\templates\contact-footer.html:30 .\root\templates\contact.html:36
+#: .\root\templates\contact-footer.html:30 .\root\templates\contact.html:37
 msgid "Submit"
 msgstr "Envoyer"
 
-#: .\root\templates\index.html:49
+#: .\root\templates\contact.html:24
+msgid ""
+"Send us a mail for more information, we will get back to you as soon as "
+"possible to answer your welcome questions!"
+msgstr ""
+"Envoyez-nous un mail pour plus d'informations, nous vous répondrons dans les "
+"plus brefs délais pour répondre à vos questions bienvenues ! "
+
+#: .\root\templates\cookies.html:9
+msgid "This is the Cookie Policy for Xerixy, accessible from"
+msgstr ""
+
+#: .\root\templates\cookies.html:10 .\root\templates\cookies.html:66
+msgid "What Are Cookies"
+msgstr "Que sont les cookies"
+
+#: .\root\templates\cookies.html:12
+msgid ""
+"As is common practice with almost all professional websites this site uses "
+"cookies, which are tiny files that are downloaded to your computer, to "
+"improve your experience. This page describes what information they gather, "
+"how we use it and why we sometimes need to store these cookies. We will also "
+"share how you can prevent these cookies from being stored however this may "
+"downgrade certain elements of the sites functionality."
+msgstr ""
+"Comme c'est la pratique courante avec presque tous les sites Web "
+"professionnels que ce site utilise les cookies, qui sont de minuscules "
+"fichiers téléchargés sur votre ordinateur, pour améliorer votre expérience. "
+"Cette page décrit les informations qu'ils recueillent, comment nous "
+"l'utilisons et pourquoi nous avons parfois besoin de stocker ces cookies. "
+"Nous allons également partagez comment vous pouvez empêcher le stockage de "
+"ces cookies, quelle que soit la manière dont cela peut rétrograder certains "
+"éléments de la fonctionnalité des sites."
+
+#: .\root\templates\cookies.html:14
+msgid "How We Use Cookies"
+msgstr "Comment nous utilisons les cookies"
+
+#: .\root\templates\cookies.html:16
+msgid ""
+"We use cookies for a variety of reasons detailed below. Unfortunately in "
+"most cases there are no industry standard options for disabling cookies "
+"without completely disabling the functionality and features they add to this "
+"site. It is recommended that you leave on all cookies if you are not sure "
+"whether you need them or not in case they are used to provide a service that "
+"you use."
+msgstr ""
+"Nous utilisons des cookies pour diverses raisons détaillées ci-dessous. "
+"Malheureusement dans la plupart des cas, il n'y a pas d'options standard de "
+"l'industrie pour désactiver les cookiessans désactiver complètement les "
+"fonctionnalités et fonctionnalités qu'ils ajoutent à cela site. Il est "
+"recommandé de laisser sur tous les cookies si vous n'êtes pas sûr que vous "
+"en ayez besoin ou non au cas où ils seraient utilisés pour fournir un "
+"service qui tu utilises."
+
+#: .\root\templates\cookies.html:18
+msgid "Disabling Cookies"
+msgstr "Désactiver les cookies"
+
+#: .\root\templates\cookies.html:20
+msgid ""
+"You can prevent the setting of cookies by adjusting the settings on your "
+"browser (see your browser Help for how to do this). Be aware that disabling "
+"cookies will affect the functionality of this and many other websites that "
+"you visit. Disabling cookies will usually result in also disabling certain "
+"functionality and features of the this site. Therefore it is recommended "
+"that you do not disable cookies. This Cookies Policy was created with the "
+"help of the"
+msgstr ""
+"Nous utilisons des cookies pour diverses raisons détaillées ci-dessous. "
+"Malheureusement dans la plupart des cas, il n'y a pas d'options standard de "
+"l'industrie pour désactiver les cookiessans désactiver complètement les "
+"fonctionnalités et fonctionnalités qu'ils ajoutent à celasite. Il est "
+"recommandé de laisser sur tous les cookies si vous n'êtes pas sûr que vous "
+"en ayez besoin ou non au cas où ils seraient utilisés pour fournir un "
+"service qui tu utilises."
+
+#: .\root\templates\cookies.html:21
+msgid "Cookies Policy Generator from"
+msgstr "Générateur de politique de cookies de"
+
+#: .\root\templates\cookies.html:23
+msgid "The Cookies We Set"
+msgstr "Les cookies que nous créons"
+
+#: .\root\templates\cookies.html:26
+msgid "Email newsletters related cookies"
+msgstr "Cookies liés aux newsletters par e-mail"
+
+#: .\root\templates\cookies.html:27
+msgid ""
+"This site offers newsletter or email subscription services and cookies may "
+"be used to remember if you are already registered and whether to show "
+"certain notifications which might only be valid to subscribed/unsubscribed "
+"users."
+msgstr ""
+"Ce site propose des services d'abonnement à la newsletter ou par e-mail et "
+"les cookies peuvent être utilisé pour se rappeler si vous êtes déjà inscrit "
+"et si vous voulez montrer certaines notifications qui pourraient n'être "
+"valables que pour les abonnés/désabonnés utilisateurs."
+
+#: .\root\templates\cookies.html:30
+msgid "Forms related cookies"
+msgstr ""
+
+#: .\root\templates\cookies.html:31
+msgid ""
+"When you submit data to through a form such as those found on contact pages "
+"or comment forms cookies may be set to remember your user details for future "
+"correspondence."
+msgstr "Cookies liés aux formulaires"
+
+#: .\root\templates\cookies.html:34
+msgid "Site preferences cookies"
+msgstr "Cookies des préférences du site"
+
+#: .\root\templates\cookies.html:35
+msgid ""
+"In order to provide you with a great experience on this site we provide the "
+"functionality to set your preferences for how this site runs when you use "
+"it. In order to remember your preferences we need to set cookies so that "
+"this information can be called whenever you interact with a page is affected "
+"by your preferences."
+msgstr ""
+"Afin de vous offrir une excellente expérience sur ce site, nous fournissons "
+"le  fonctionnalité pour définir vos préférences concernant le fonctionnement "
+"de ce site lorsque vous utilisez it. Afin de mémoriser vos préférences, nous "
+"devons définir des cookies afin que cette information peut être appelée "
+"chaque fois que vous interagissez avec une page est affectéepar vos "
+"préférences."
+
+#: .\root\templates\cookies.html:38
+msgid "Third Party Cookies"
+msgstr "Cookies tiers"
+
+#: .\root\templates\cookies.html:39
+msgid ""
+"In some special cases we also use cookies provided by trusted third parties. "
+"The following section details which third party cookies you might encounter "
+"through this site."
+msgstr ""
+" Dans certains cas particuliers, nous utilisons également des cookies "
+"fournis par des tiers de confiance.  La section suivante détaille les "
+"cookies tiers que vous pourriez rencontrer via ce site."
+
+#: .\root\templates\cookies.html:43
+msgid ""
+"This site uses Google Analytics which is one of the most widespread and "
+"trusted analytics solution on the web for helping us to understand how you "
+"use the site and ways that we can improve your experience. These cookies may "
+"track things such as how long you spend on the site and the pages that you "
+"visit so we can continue to produce engaging content."
+msgstr ""
+"Ce site utilise Google Analytics qui est l'un des plus répandus et solution "
+"d'analyse de confiance sur le Web pour nous aider à comprendre comment vous "
+"utiliser le site et les moyens que nous pouvons améliorer votre expérience. "
+"Ces cookies peuvent suivez des éléments tels que le temps que vous passez "
+"sur le site et les pages que vousvisite pour que nous puissions continuer à "
+"produire du contenu engageant."
+
+#: .\root\templates\cookies.html:45
+msgid ""
+"For more information on Google Analytics cookies, see the official Google "
+"Analytics page."
+msgstr ""
+"Pour plus d'informations sur les cookies de Google Analytics, consultez la "
+"page officielle de Google Analytics."
+
+#: .\root\templates\cookies.html:49
+msgid ""
+"This site uses Google Recaptcha which is one of the most widespread and "
+"trusted anti bot solution on the web for helping us to filter the site that "
+"can improve your experience."
+msgstr ""
+"Ce site utilise Google Recaptcha qui est l'un des plus répandus et solution "
+"anti-bot de confiance sur le web pour nous aider à filtrer le site qui peut "
+"améliorer votre expérience."
+
+#: .\root\templates\cookies.html:51 .\root\templates\cookies.html:57
+msgid ""
+"For more information on Google Recaptcha cookies, see the official Google "
+"Recaptcha page."
+msgstr ""
+"Pour plus d'informations sur les cookies Google Recaptcha, consultez la page "
+"officielle de Google Recaptcha."
+
+#: .\root\templates\cookies.html:55
+msgid ""
+"This site uses IPINFO which is one of the most widespread and trusted Ip "
+"locator solution on the web for helping us to filter the content based on "
+"the targeted audience, that can help you and find what you are interested in."
+msgstr ""
+" Ce site utilise IPINFO qui est l'une des Ip les plus répandues et les plus "
+"fiables solution de localisation sur le web pour nous aider à filtrer le "
+"contenu en fonction de le public ciblé, qui peut vous aider et trouver ce "
+"qui vous intéresse."
+
+#: .\root\templates\cookies.html:60
+msgid ""
+"We also use social media buttons and/or plugins on this site that allow you "
+"to connect with your social network in various ways. For these to work the "
+"following social media sites including; Facebook, Facebook Messenger, will "
+"set cookies through our site which may be used to enhance your profile on "
+"their site or contribute to the data they hold for various purposes outlined "
+"in their respective privacy policies."
+msgstr ""
+" Nous utilisons également des boutons et/ou des plugins de réseaux sociaux "
+"sur ce site qui vous permettent pour se connecter avec votre réseau social "
+"de diverses manières. Pour que ceux-ci fonctionnent le suivant les sites de "
+"médias sociaux, y compris; Facebook, Facebook Messenger, Définir des cookies "
+"via notre site qui peuvent être utilisés pour améliorer votre profil sur "
+" leur site ou contribuer aux données qu'ils détiennent à diverses fins "
+"décrites dans leurs politiques de confidentialité respectives."
+
+#: .\root\templates\cookies.html:63
+msgid "More Information"
+msgstr "Plus d'information"
+
+#: .\root\templates\cookies.html:64
+msgid ""
+"Hopefully that has clarified things for you and as was previously mentioned "
+"if there is something that you aren't sure whether you need or not it's "
+"usually safer to leave cookies enabled in case it does interact with one of "
+"the features you use on our site."
+msgstr ""
+" Nous esperons que cela a clarifié les choses pour vous et comme cela a été "
+"mentionné précédemment  s'il y a quelque chose dont vous n'êtes pas sûr "
+"d'avoir besoin ou non, c'est généralement plus sûr de laisser les cookies "
+"activés au cas où ils interagissent avec l'un des les fonctionnalités que "
+"vous utilisez sur notre site."
+
+#: .\root\templates\cookies.html:65
+msgid "For more general information on cookies, please read"
+msgstr "Pour plus d'informations générales sur les cookies, veuillez lire"
+
+#: .\root\templates\cookies.html:67
+msgid ""
+"However if you are still looking for more information then you can contact "
+"us through one of our preferred contact methods"
+msgstr ""
+"Cependant, si vous recherchez toujours plus d'informations, vous pouvez nous "
+"contacter via l'une de nos méthodes de contact préférées."
+
+#: .\root\templates\cookies.html:69
+msgid "By visiting this link"
+msgstr "En visitant ce lien"
+
+#: .\root\templates\index.html:56
 msgid "your future"
 msgstr "Votre futur"
 
-#: .\root\templates\index.html:49
+#: .\root\templates\index.html:56
 msgid "in our hands."
 msgstr "entre nos mains."
 
-#: .\root\templates\index.html:52
+#: .\root\templates\index.html:59
 msgid "Xerixy gives you vision to a successful business"
 msgstr "Xerixy vous donne la vision d'une entreprise prospère"
 
-#: .\root\templates\index.html:61
+#: .\root\templates\index.html:68
 msgid "about us"
 msgstr "à propos de nous"
 
-#: .\root\templates\index.html:65
+#: .\root\templates\index.html:72
 msgid ""
 "\n"
 "        Xerixy has a vision to empower the best entrepreneurial talents with "
@@ -1612,19 +1917,19 @@ msgstr ""
 "de générer une croissance des ventes numériques pour les entreprises, de A à "
 "Z. Grâce à nos techniques performantes, vous grandirez avec nous. "
 
-#: .\root\templates\index.html:71
+#: .\root\templates\index.html:78
 msgid "Order now"
 msgstr "Commandez maintenant"
 
-#: .\root\templates\index.html:80
+#: .\root\templates\index.html:87
 msgid "our mission"
 msgstr "notre mission"
 
-#: .\root\templates\index.html:87
+#: .\root\templates\index.html:94
 msgid "Project study"
 msgstr "Etude de projet"
 
-#: .\root\templates\index.html:89
+#: .\root\templates\index.html:96
 msgid ""
 "\n"
 "        We have the best project management specialists that will be "
@@ -1637,11 +1942,11 @@ msgstr ""
 "exaucera votre souhait dans un modèle numérique accrocheur prêt à être "
 "codé ! "
 
-#: .\root\templates\index.html:99
+#: .\root\templates\index.html:106
 msgid "sketching /UI"
 msgstr ""
 
-#: .\root\templates\index.html:101
+#: .\root\templates\index.html:108
 msgid ""
 "\n"
 "        We have the best skilled and talented design team and that will "
@@ -1653,11 +1958,11 @@ msgstr ""
 "et qui exaucera votre souhait dans un modèle numérique accrocheur prêt à "
 "être codé !"
 
-#: .\root\templates\index.html:111
+#: .\root\templates\index.html:118
 msgid "Conception"
 msgstr ""
 
-#: .\root\templates\index.html:113
+#: .\root\templates\index.html:120
 msgid ""
 "\n"
 "          We picked the most brilliant programmers who work with the best\n"
@@ -1669,11 +1974,11 @@ msgstr ""
 "avec les meilleurs systèmes de programmation pour vous offrir un code propre "
 "et un produit sans bogues"
 
-#: .\root\templates\index.html:123
+#: .\root\templates\index.html:130
 msgid "Delivery"
 msgstr "Livraison "
 
-#: .\root\templates\index.html:125
+#: .\root\templates\index.html:132
 msgid ""
 "\n"
 "        The delivery with a gift, that's what everyone needs, our gift is "
@@ -1690,11 +1995,11 @@ msgstr ""
 "google et vous aidera à être trouvé dans les premières pages de recherche "
 "google pour augmenter votre trafic et votre profit "
 
-#: .\root\templates\index.html:137
+#: .\root\templates\index.html:144
 msgid "Search Engine Optimization"
 msgstr "optimisation du moteur de recherche "
 
-#: .\root\templates\index.html:139
+#: .\root\templates\index.html:146
 msgid ""
 "\n"
 "        Our SEO search engine Optimization specialist will help you after "
@@ -1707,6 +2012,10 @@ msgstr ""
 "Notre spécialiste de l'optimisation des moteurs de recherche SEO vous aidera "
 "après la livraison à atteindre une croissance visuelle et à obtenir plus de "
 "trafic sur google et de profit "
+
+#: .\root\templates\news.html:23
+msgid "Read more"
+msgstr ""
 
 #~ msgid "Communication agency in Morocco"
 #~ msgstr "Agence de communication au Maroc"
@@ -1830,9 +2139,6 @@ msgstr ""
 
 #~ msgid "Sea (paid referencing) in Agadir"
 #~ msgstr "Sea (référencement payant) à Agadir"
-
-#~ msgid "Sea (paid referencing) in Fes"
-#~ msgstr "Sea (référencement payant) à Fes"
 
 #~ msgid "Sem in Morocco"
 #~ msgstr "Sem au Maroc"

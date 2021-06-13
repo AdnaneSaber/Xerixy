@@ -1,13 +1,20 @@
-{% extends "base.html" %} {% load static %} {% load i18n %} {% block css %}
+{% extends "base.html" %}
+{% load static %}
+{% load i18n %}
+{% block css %}
 <link
   rel="stylesheet"
   href="{% static 'css/index.css' %}"
   type="text/css"
   charset="utf-8"
 />
-{% endblock css %} {% block title %}
+<meta name="title" content="{{user.nom_sur_site}} | {% block metaT %}{% trans 'Home' %}{% endblock metaT %}">
+<meta name="description" content="{% block metaD %}{% endblock metaD %}">
+{% endblock css %}
+{% block title %}
 <title>{{user.nom_sur_site}}</title>
-{% endblock title %} {% block content %}
+{% endblock title %}
+{% block content %}
 
 <div class="landing">
   <div class="socialLinks">
@@ -145,12 +152,9 @@
     </div>
   </div>
 </div>
-<!-- <div class="team">
-    <div class="title">
-        <h3>our team</h3>
-    </div>
-</div> -->
-{% include 'contact-footer.html' %} {% endblock content %} {% block script %}
+{% include 'contact-footer.html' %}
+{% endblock content %}
+{% block script %}
 <script src="{% static 'js/modernizr.js' %}"></script>
 <script src="{% static 'js/paraxify.js' %}"></script>
 <script src="{% static 'js/index.js' %}"></script>

@@ -6,7 +6,8 @@
 <link rel="stylesheet" href="{% static 'css/contact_page.css' %}">
 {% endblock css %}
 {% block title %}
-<title>{{user.nom_sur_site | capfirst}} | {{self.title | capfirst}}</title>
+<title>{{self|capfirst}} - {{user.nom_sur_site}}</title>
+
 {% endblock title %}
 {% load crispy_forms_tags %}
 {% block content %}

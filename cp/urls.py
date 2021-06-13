@@ -22,22 +22,22 @@ from django.contrib.sitemaps.views import sitemap
 from django.conf.urls.i18n import i18n_patterns
 
 sitemaps = {
-    'page':PageSitemap,
-    'blog':NewSitemap,
-    'seo':SeoLinkSitemap,
-    'services':ServiceSitemap,
-    'static':StaticSitemap
+    'page': PageSitemap,
+    'blog': NewSitemap,
+    'seo': SeoLinkSitemap,
+    'services': ServiceSitemap,
+    'static': StaticSitemap
 }
 
 urlpatterns = [
     path('adminX/', admin.site.urls),
-     path('tinymce/', include('tinymce.urls')),
+    path('tinymce/', include('tinymce.urls')),
     path('api/', include('root.urls')),
     path('i18n/', include('django.conf.urls.i18n')),
 ]
-urlpatterns +=i18n_patterns(
-    
+urlpatterns += i18n_patterns(
     path('', root_view.index, name="index"),
+    path('cookies-policy/', root_view.cookies_view, name="cookies"),
     path('portfolio/', include('portfolio.urls')),
     path('chat/', include('chat.urls')),
     path('adminXerixyUpdate/', root_view.update_view, name='update'),
@@ -53,6 +53,7 @@ urlpatterns +=i18n_patterns(
     path('services/<str:service_url>/', root_view.service_view, name="service"),
     path('todos/', include('tasks.urls')),
     path('<str:page_url>/', root_view.page_view, name="page"),
-    path('sitemap.xml', sitemap, {'sitemaps': sitemaps}, name='django.contrib.sitemaps.views.sitemap'),
+    path('sitemap.xml', sitemap, {'sitemaps': sitemaps},
+         name='django.contrib.sitemaps.views.sitemap'),
     # prefix_default_language=False,
 )

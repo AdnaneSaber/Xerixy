@@ -11,7 +11,7 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="title" content="{% block metaT %}{% endblock metaT %} | Xerixy">
+    <meta name="title" content="{% block metaT %}{% endblock metaT %}">
     <meta name="description" content="{% block metaD %}{% endblock metaD %}">
     {% comment %} Fonts {% endcomment %}
     <style>
@@ -167,6 +167,34 @@
     </nav>
     {% block content %}
     {% endblock content %}
+    <div id="mask" class="dn"></div>
+    <div class="cookies">
+        <div class="popup" id="cookieTalk"></div>
+        <div class="box">
+            <a href="#" id="cookieManBtn"><img src="{% static 'images/cookie.svg' %}" class="cookieStatus"
+                    id="cookieMan" alt="cookies - xerixy"></a>
+            <svg class="cookieStatus dn" id="cookieChecked" version="1.1" id="Layer_1"
+                xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                viewBox="0 0 98.5 98.5" enable-background="new 0 0 98.5 98.5" xml:space="preserve">
+                <path class="checkmark" fill="none" stroke-width="8" stroke-miterlimit="10"
+                    d="M81.7,17.8C73.5,9.3,62,4,49.2,4
+	                C24.3,4,4,24.3,4,49.2s20.3,45.2,45.2,45.2s45.2-20.3,45.2-45.2c0-8.6-2.4-16.6-6.5-23.4l0,0L45.6,68.2L24.7,47.3" />
+            </svg>
+            <svg>
+                <circle cx="50" cy="50" r="50"></circle>
+                <circle id="cookieProgress" cx="50" cy="50" r="50"></circle>
+            </svg>
+        </div>
+    </div>
+    <div class="cookieOptions dn">
+        <button id="closeCookies">
+            &times;
+        </button>
+        <h4>{% trans 'Cookie Policy for Xerixy' %}</h4>
+        <p>{% trans 'This is the Cookie Policy for Xerixy, for more informations' %}
+            <a href="{% url 'cookies' %}">{% trans 'read more' %}</a>.</p>
+        <p>{% trans 'Close this tab and scroll down to accept.' %}</p>
+    </div>
     <footer>
         <div class="freeQuote" id="freeQuote">
             <h3>{% trans 'CURIOUS? Get a free quote now.' %}</h3>
@@ -189,8 +217,7 @@
                     {% if news %}
                     <li class="navLinksItem"><a href="{% url 'news' %}">{% trans 'Blog' %}</a></li>
                     {% endif %}
-                    <li class="navLinksItem"><a
-                            href="{% url 'contact' %}">{% trans 'Contact' %}</a></li>
+                    <li class="navLinksItem"><a href="{% url 'contact' %}">{% trans 'Contact' %}</a></li>
                 </ul>
             </div>
             <div class="seoLinks">
@@ -211,19 +238,79 @@
 
         </div>
     </footer>
-    <!-- lOCATOR :  This renders the location of the logged in user :D  -->
-    <script>
-        // jQuery.get("https://ipinfo.io", function (response) {
-        //     console.log(response.city, response.country);
-        // }, "jsonp");
-        // const request = await fetch("https://ipinfo.io/json?token=$TOKEN")
-        // const json = await request.json()
-
-        // console.log(jsonResponse.ip, jsonResponse.country)
-    </script>
-    <!-- END LOCATOR -->
     {% compress js %}
+    <script>
+        let accepted = false;
+        const get_cookie = (name) => {
+            const value = `; ${document.cookie}`;
+            const parts = value.split(`; ${name}=`);
+            if (parts.length === 2) return parts.pop().split(";").shift();
+        };
+
+        const setCookie = (name, value, days) => {
+            let expires = "";
+            if (days) {
+                let date = new Date();
+                date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+                expires = "; expires=" + date.toUTCString();
+            }
+            document.cookie = name + "=" + (value || "") + expires + "; path=/";
+            console.log("test");
+        }
+        let cookieTalk = [
+            `<span class="title">{% trans 'Hello there, I am Cookie-Man !' %}</span>`,
+            `<span>{% trans "By scrolling you are accepting Xerixy's cookies" %}`,
+            `({% trans 'My friends and I' %})`,
+            `{% trans "We will not betray your privacy, it's just to ensure you better user experience, I promise cookie word" %} ✋.`,
+            `{% trans "Click me to read more.." %} </span>`
+        ];
+        $(document).ready(function () {
+            if (!get_cookie('cookie_accepted')) {
+                $('.cookies').css('left', '50px');
+                const talking = new TypeIt("#cookieTalk", {
+                    strings: cookieTalk,
+                    speed: 30,
+                    waitUntilVisible: true
+                }).go();
+                let checked = new Audio(`{% static 'audio/checked.mp3' %}`);
+
+                $(window).bind("scroll", function () {
+                    let progress = 440 - (440 * $(document).scrollTop()) / 1000;
+                    let progressCircle = $("#cookieProgress");
+                    if (!accepted) {
+                        progressCircle.css("stroke-dashoffset", progress);
+                    }
+                    if (progress <= 125) {
+                        if (!accepted) {
+                            checked.volume = 0.05;
+                            checked.play();
+                            $("#cookieProgress").remove();
+                            $("#cookieMan").toggleClass('dn');
+                            $("#cookieChecked").toggleClass('dn');
+                            $("#cookieTalk").text("")
+                            setTimeout(() => {
+                                talking.freeze();
+                            }, 300);
+                            new TypeIt("#cookieTalk", {
+                                strings: `<span class="title">{% trans 'Thank you, enjoy!' %}</span>`,
+                                speed: 30,
+                                waitUntilVisible: true
+                            }).go();
+                            setTimeout(() => {
+                                $(".cookies").css("left", "-3000px");
+                            }, 2000);
+                            accepted = true;
+                            setCookie('cookie_accepted', accepted, 365 * 10)
+                        }
+                    }
+                })
+            }
+
+
+        })
+    </script>
     <script src="{% static 'js/jquery.min.js' %}"></script>
+    <script src="{% static 'js/typeit.min.js' %}"></script>
     <script src="{% static 'js/nav.js' %}"></script>
     {% endcompress %}
     {% block script %}

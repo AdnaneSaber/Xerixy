@@ -2,10 +2,11 @@ from django import forms
 from .models import Lead
 from django.utils.translation import ugettext_lazy as _
 from captcha.fields import ReCaptchaField
+from captcha.widgets import ReCaptchaV3 
 
 
 class ContactForm(forms.ModelForm):
-    captcha = ReCaptchaField()
+    captcha = ReCaptchaField(widget=ReCaptchaV3)
 
     class Meta:
         model = Lead

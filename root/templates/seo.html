@@ -2,12 +2,13 @@
 {% load static %}
 {% load fill_vars %}
 {% block idBody %}{{self.id}}{% endblock idBody %}
-{% block metaT %}{{link.meta_title}}{% endblock metaT %}
+{% block metaT %}{{link.meta_title}} - {{user.nom_sur_site}}{% endblock metaT %}
 {% block metaD %}{{link.meta_description}}{% endblock metaD %}
 {% block title %}
 <link rel="stylesheet" href="{% static 'css/seo.css' %}">
-<title>{{user.nom_sur_site | capfirst}} | {{link.title | capfirst}}</title>
-{% endblock %}
+<title>{{link.title|capfirst}} - {{user.nom_sur_site}}</title>
+
+{% endblock title %}
 
 {% block content %}
 <div class="contentContainer" id="content-{{link.id}}">

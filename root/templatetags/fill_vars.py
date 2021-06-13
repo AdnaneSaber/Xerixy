@@ -17,7 +17,6 @@ def rep(value):
     for i in variables:
         output = output.replace(f'{{{{{i}}}}}',variables[i])
     regex = r"link:(.*?)>"
-    print(re.findall(regex, output))
     for i in re.findall(regex, output):
         link,text = str(i).split("<")
         if 'mailto:' in link or 'tel:' in link:

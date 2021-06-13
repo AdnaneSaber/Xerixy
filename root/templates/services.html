@@ -5,7 +5,7 @@
 <link rel="stylesheet" href="{% static 'css/services.css' %}" type="text/css" charset="utf-8">
 {% endblock css %}
 {% block title %}
-<title>{{user.nom_sur_site | capfirst}} | {{self.title | capfirst}}</title>
+<title>{{self|capfirst}} - {{user.nom_sur_site}}</title>
 {% endblock %}
 {% block content %}
 <div class="services">

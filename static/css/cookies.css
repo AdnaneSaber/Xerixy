@@ -1,0 +1,31 @@
+body {
+  background-color: #1D2228;
+}
+
+.cookiesContainer {
+  color: white;
+  padding: 70px;
+}
+
+.cookiesContainer h1 {
+  text-align: center;
+  margin-bottom: 100px;
+}
+
+.cookiesContainer a,
+.cookiesContainer a:visited {
+  color: #fff;
+  font-weight: bold;
+}
+
+.cookiesContainer p strong {
+  margin: 40px 0;
+  font-size: 30px;
+  line-height: 2;
+}
+
+.contactContainer h3,
+.contactContainer p {
+  color: white;
+}
+/*# sourceMappingURL=cookies.css.map */

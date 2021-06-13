@@ -64,6 +64,13 @@ def form_view(request):
     return context
 
 
+def cookies_view(request):
+    context = {"self": "cookies policy"}.copy()
+    context.update(bases())
+    context.update(form_view(request))
+    return render(request, "cookies.html", context)
+
+
 def contact_view(request):
     context = {"self": "contact"}.copy()
     context.update(bases())
@@ -83,7 +90,7 @@ def bases():
 
 
 def index(request):
-    context = {"self": "index"}.copy()
+    context = {"self": "Accueil"}.copy()
     context.update(bases())
     context.update(form_view(request))
     return render(request, "index.html", context=context)

@@ -1,6 +1,7 @@
 $dark:#1D2228;
 $light:#8A8DA2;
 $darker:#140d17;
+$cookieBlue:#03a9f4;
 
 body,
 html {
@@ -163,6 +164,7 @@ nav {
         z-index: 11;
         height: 30px;
         width: 75px;
+        transition: top .4s ease-in-out;
 
         @media screen and (max-width:800px) {
 
@@ -416,4 +418,176 @@ footer {
         }
     }
 
+}
+
+.cookies {
+    position: fixed;
+    z-index: 9;
+    left: -3000px;
+    bottom: 50px;
+    transition: left 1s ease-in-out;
+
+    .cookieStatus {
+        width: 90px;
+        height: auto;
+        position: absolute;
+        z-index: 2;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        top: 59%;
+
+
+        .checkmark {
+            stroke: $cookieBlue;
+            stroke-dashoffset: 745.74853515625;
+            stroke-dasharray: 745.74853515625;
+            animation: dash 2s ease-out forwards;
+        }
+
+        @keyframes dash {
+            0% {
+                stroke-dashoffset: 745.74853515625;
+            }
+
+            100% {
+                stroke-dashoffset: 0;
+            }
+        }
+    }
+
+    .popup {
+        width: 400px;
+        background-color: #f3f3f3;
+        border-radius: 20px;
+        padding: 20px;
+        text-align: center;
+        bottom: -50px;
+
+
+        span {
+            line-height: 1.5;
+
+            &.title {
+                margin-bottom: 1em;
+                font-family: 'Montserrat-Bold';
+                font-weight: 30px;
+            }
+        }
+
+        &::after {
+            content: "";
+            background-color: inherit;
+            display: block;
+            width: 0;
+            height: 0;
+            border-right: 20px solid transparent;
+            border-left: 20px solid transparent;
+            border-top: 20px solid #f3f3f3;
+            border-bottom: 30px solid transparent;
+            position: absolute;
+            bottom: 85px;
+            background: none;
+            left: 36px;
+
+        }
+    }
+
+    .box {
+        position: relative;
+        width: 110px;
+        height: 110px;
+        overflow: hidden;
+        padding-top: 25px;
+    }
+
+
+    svg {
+        position: relative;
+        width: 110px;
+        height: 110px;
+        transform: rotate(-90deg);
+
+        circle {
+            position: relative;
+            width: 150px;
+            height: 150px;
+            fill: $dark;
+            stroke-width: 10;
+            stroke: #000;
+            transform: translate(5px, 5px);
+            stroke-dasharray: 440;
+            stroke-dashoffset: 440;
+
+            &:nth-child(1) {
+                stroke-dashoffset: 0;
+                stroke: #f3f3f3;
+            }
+
+            &:nth-child(2) {
+                stroke-dashoffset: 440;
+                transition: stroke-dashoffset .1s ease-in-out;
+                stroke: $cookieBlue;
+            }
+        }
+    }
+}
+
+.dn {
+    display: none !important;
+}
+
+body.dn {
+    display: block !important;
+    overflow: hidden;
+}
+
+.cookieOptions {
+    width: 70vw;
+    z-index: 12;
+    background-color: $cookieBlue;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 4% 1%;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+
+    a,
+    a:visited {
+        color: #fff;
+        font-weight: bold;
+    }
+
+    h4 {
+        margin-bottom: 40px;
+        font-size: 40px;
+        font-family: 'Montserrat-Bold';
+    }
+
+    #closeCookies {
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        top: 20px;
+        right: 20px;
+        border: 1px solid #fff;
+        background-color: transparent;
+        color: white;
+        cursor: pointer;
+
+    }
+}
+
+#mask {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 11;
+    background-color: #000000ab;
 }

@@ -101,7 +101,7 @@ $darker:#140d17;
                 grid-template-areas: 'firstname firstname firstname intrested intrested intrested'
                 'lastname lastname lastname area area area'
                 'phone phone phone area area area'
-                'mail mail mail captch captch submit';
+                'mail mail mail submit submit submit';
                 grid-gap: 10px;
                 padding: 10px;
 
@@ -110,9 +110,10 @@ $darker:#140d17;
                 }
 
                 select {
-                    @media screen and (max-width:725px) {
-                        min-width: calc(100% - 10px) !important;
+                    width: calc(100% - 20px)!important;
+                    min-width: 220px !important;
 
+                    @media screen and (max-width:725px) {
                         height: 61px;
                     }
 
@@ -124,10 +125,12 @@ $darker:#140d17;
                     width: calc(100% - 30px);
                 }
 
+
                 input,
                 textarea,
                 select {
-                    min-width: calc(100% - 10px - 20px);
+                    min-width: 200px;
+                    width: calc(100% - 40px);
                     background: transparent;
                     border: none !important;
                     border-bottom: 1px solid #ffffff !important;

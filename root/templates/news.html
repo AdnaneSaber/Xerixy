@@ -1,24 +1,30 @@
 {% extends "base.html" %}
 {% load static %}
 
+{% load i18n %}
 {% block title %}
-<link rel="stylesheet" href="{% static 'css/news.css' %}">
-<title>{{user.nom_sur_site | capfirst}} | {{self.title | capfirst}}</title>
+<link rel="stylesheet" href="{% static 'css/service.css' %}">
+<title>{{self.title|capfirst}} - {{user.nom_sur_site}}</title>
+
 {% endblock %}
 {% block content %}
 <h1 class="text-center">{{news.post_title}}</h1>
 
 <div class="row m-0">
     {% for new in news %}
-    <div class="card mb-3 col-md-4 mx-auto">
-        <img src="{% static new.post_image %}" class="card-img-top" alt="">
-        <div class="card-body">
-            <a href="{% url 'new' new.post_url %}" class="card-title">{{new.post_title}}</h5>
-            <p class="card-text">{{new.post_content}}</p>
-            <!-- <a href="{{new.news_url}}">Lire plus</a> -->
+    <div class="srvs">
+        <h1 class="srvs-title" data-text="{{new.post_title | capfirst}}">{{new.post_title | capfirst}}</h1>
+    
+        <div class="srvsContainer">
+                <p class="srvs-text">{{new.post_content | capfirst}}</p>
+            <img src="{% static new.post_image %}" class="srvs-img-top"
+                alt="xerixy blog" />
+    
+            <a href="{% url 'new' new.post_url %}">{% trans 'Read more' %}</a>
         </div>
     </div>
     {% endfor %}
 </div>
+
 {% include 'contact-footer.html' %}
 {% endblock %}

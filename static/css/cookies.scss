@@ -1,0 +1,40 @@
+$dark:#1D2228;
+$light:#8A8DA2;
+$darker:#140d17;
+$cookieBlue:#03a9f4;
+
+body {
+    background-color: $dark;
+}
+
+.cookiesContainer {
+    color: white;
+    padding: 70px;
+
+    h1 {
+        text-align: center;
+        margin-bottom: 100px;
+    }
+
+    a,
+    a:visited {
+        color: #fff;
+        font-weight: bold;
+    }
+
+    p {
+        strong {
+            margin: 40px 0;
+            font-size: 30px;
+            line-height: 2;
+        }
+    }
+}
+
+.contactContainer {
+
+    h3,
+    p {
+        color: white;
+    }
+}
