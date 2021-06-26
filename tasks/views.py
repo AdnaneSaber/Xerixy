@@ -19,7 +19,7 @@ class TasksView(APIView):
         return Response(serializer.data)
 
     def delete(self, request, id, *args, **kwargs):
-        todos = Task.objects.filter(id=id).delete()
+        Task.objects.filter(id=id).delete()
         return Response(status=status.HTTP_200_OK)
 
     def post(self, request, *args, **kwargs):
@@ -41,9 +41,10 @@ class TasksView(APIView):
                 newState = True
             else:
                 return Response(status=status.HTTP_400_BAD_REQUEST)
-            with connection.cursor() as cursor:
-                cursor.execute(f"""
-                    update tasks_task set done = {newState} where id = {id} """)
+            Task.objects.filter(id=id).update(done=newState)
+            # with connection.cursor() as cursor:
+            #     cursor.execute(f"""
+            #         update tasks_task set done = {newState} where id = {id} """)
             return Response(status=status.HTTP_200_OK)
         else:
             return Response(status=status.HTTP_400_BAD_REQUEST)
