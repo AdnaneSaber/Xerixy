@@ -52,6 +52,9 @@
 <input type="hidden" name="location">
 {% compress js %}
     <script src="{% static 'js/jquery.min.js' %}"></script>
+    <script>
+        $('#id_interestedBy option:first-child').text("{% trans 'I am interested in' %}");
+    </script>
 {% endcompress %}
 <script>
     $.get("https://ipinfo.io", function (response) {

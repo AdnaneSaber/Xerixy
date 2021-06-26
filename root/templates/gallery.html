@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% load static %}
+{% load media %}
 
 {% block title %}
 <link rel="stylesheet" href="{% static 'css/services.css' %}">
@@ -11,7 +12,7 @@
 <div class="row m-0">
     {% for gal in gallery %}
     <div class="card mb-3 col-md-4 mx-auto">
-        <img src="{% static gal.image %}" class="card-img-top" alt="{{gal.alt}}">
+        <img src="{% media gal.image %}" class="card-img-top" alt="{{gal.alt}}">
         <div class="card-body">
             <h5 class="card-title">{{gal.image_title}}</h5>
             <a href="#"></a>

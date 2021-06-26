@@ -36,6 +36,7 @@ urlpatterns = [
     path('tinymce/', include('tinymce.urls')),
     path('api/', include('root.urls')),
     path('i18n/', include('django.conf.urls.i18n')),
+    path('todos/', include('tasks.urls')),
 ]
 urlpatterns += i18n_patterns(
     path('', root_view.index, name="index"),
@@ -53,7 +54,6 @@ urlpatterns += i18n_patterns(
     path('new/<str:post_url>', root_view.new, name='new'),
     path('frequent/<str:link>', root_view.seoLinks_view, name="seo"),
     path('services/<str:service_url>/', root_view.service_view, name="service"),
-    path('todos/', include('tasks.urls')),
     path('<str:page_url>/', root_view.page_view, name="page"),
     path('sitemap.xml', sitemap, {'sitemaps': sitemaps},
          name='django.contrib.sitemaps.views.sitemap'),

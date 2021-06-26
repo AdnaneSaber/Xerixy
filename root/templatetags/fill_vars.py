@@ -33,10 +33,6 @@ def rep(value):
         
     return output
 
-@register.simple_tag
-def media(value):
-    return f'/media/{value}'
-
 
 @register.filter(name='template_trans')
 def template_trans(text):
@@ -46,4 +42,3 @@ def template_trans(text):
         return text
 
 register.filter('vars', rep)
-register.filter('media', rep)

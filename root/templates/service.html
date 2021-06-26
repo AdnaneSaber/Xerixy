@@ -1,13 +1,16 @@
 {% extends "base.html" %}
 {% load static %}
-{% load fill_vars %}
+{% load media %}
 
 {% block metaT %}{{service.service_meta_title}}{% endblock metaT %}
 {% block metaD %}{{service.service_meta_description}}{% endblock metaD %}
 
 
-{% block title %}
+{% block css %}
 <link rel="stylesheet" href="{% static 'css/service.css' %}">
+{% endblock css %}
+
+{% block title %}
 <title>{{service.service_title|capfirst}} - {{user.nom_sur_site}}</title>
 {% endblock %}
 {% block content %}

@@ -123,6 +123,9 @@
                 {% if services %}
                 <li class="navLinksItem"><a href="{% url 'services' %}">{% trans 'Our offers' %}</a></li>
                 {% endif %}
+                {% if gallery %}
+                <li class="navLinksItem"><a href="{% url 'gallery' %}">{% trans 'Gallery' %}</a></li>
+                {% endif %}
                 {% for page in pages %}
                 <li class="navLinksItem"><a
                         href="{% url 'page' page.page_url %}">{% blocktrans with page.page_title|template_trans as page_title %}{{page_title}}{% endblocktrans %}</a>
