@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 {% load static %}
-
+{% load fill_vars %}
 
 {% block metaT %}{{service.service_meta_title}}{% endblock metaT %}
 {% block metaD %}{{service.service_meta_description}}{% endblock metaD %}
@@ -16,7 +16,7 @@
 
     <div class="srvsContainer">
             <p class="srvs-text">{{service.service_content | capfirst}}</p>
-        <img src="{% static service.service_image %}" class="srvs-img-top"
+        <img src="{% media service.service_image %}" class="srvs-img-top"
             alt="{% static 'service.service_image_alt' %}" />
 
         <a href="{% url 'services' %}">Back</a>

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-06-13 19:52+0100\n"
+"POT-Creation-Date: 2021-06-26 10:56+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -1552,7 +1552,7 @@ msgstr ""
 msgid "Pick your language"
 msgstr "Choisissez votre langue"
 
-#: .\root\templates\base.html:195 .\root\templates\cookies.html:8
+#: .\root\templates\base.html:195 .\root\templates\cookies.html:13
 msgid "Cookie Policy for Xerixy"
 msgstr ""
 
@@ -1605,7 +1605,9 @@ msgstr "Mes amis et moi"
 msgid ""
 "We will not betray your privacy, it's just to ensure you better user "
 "experience, I promise cookie word"
-msgstr "Nous ne trahirons pas votre vie privée, c'est juste pour vous assurer une meilleure expérience utilisateur, promis parole de cookie"
+msgstr ""
+"Nous ne trahirons pas votre vie privée, c'est juste pour vous assurer une "
+"meilleure expérience utilisateur, promis parole de cookie"
 
 #: .\root\templates\base.html:267
 msgid "Click me to read more.."
@@ -1640,6 +1642,10 @@ msgstr ""
 msgid "Submit"
 msgstr "Envoyer"
 
+#: .\root\templates\contact-footer.html:38
+msgid "I am interested in"
+msgstr "Interessé par"
+
 #: .\root\templates\contact.html:24
 msgid ""
 "Send us a mail for more information, we will get back to you as soon as "
@@ -1649,14 +1655,18 @@ msgstr ""
 "plus brefs délais pour répondre à vos questions bienvenues ! "
 
 #: .\root\templates\cookies.html:9
+msgid "Cookies Privacy"
+msgstr ""
+
+#: .\root\templates\cookies.html:14
 msgid "This is the Cookie Policy for Xerixy, accessible from"
 msgstr ""
 
-#: .\root\templates\cookies.html:10 .\root\templates\cookies.html:66
+#: .\root\templates\cookies.html:15 .\root\templates\cookies.html:80
 msgid "What Are Cookies"
 msgstr "Que sont les cookies"
 
-#: .\root\templates\cookies.html:12
+#: .\root\templates\cookies.html:17
 msgid ""
 "As is common practice with almost all professional websites this site uses "
 "cookies, which are tiny files that are downloaded to your computer, to "
@@ -1674,11 +1684,11 @@ msgstr ""
 "ces cookies, quelle que soit la manière dont cela peut rétrograder certains "
 "éléments de la fonctionnalité des sites."
 
-#: .\root\templates\cookies.html:14
+#: .\root\templates\cookies.html:19
 msgid "How We Use Cookies"
 msgstr "Comment nous utilisons les cookies"
 
-#: .\root\templates\cookies.html:16
+#: .\root\templates\cookies.html:21
 msgid ""
 "We use cookies for a variety of reasons detailed below. Unfortunately in "
 "most cases there are no industry standard options for disabling cookies "
@@ -1695,11 +1705,11 @@ msgstr ""
 "en ayez besoin ou non au cas où ils seraient utilisés pour fournir un "
 "service qui tu utilises."
 
-#: .\root\templates\cookies.html:18
+#: .\root\templates\cookies.html:23
 msgid "Disabling Cookies"
 msgstr "Désactiver les cookies"
 
-#: .\root\templates\cookies.html:20
+#: .\root\templates\cookies.html:25
 msgid ""
 "You can prevent the setting of cookies by adjusting the settings on your "
 "browser (see your browser Help for how to do this). Be aware that disabling "
@@ -1717,19 +1727,19 @@ msgstr ""
 "en ayez besoin ou non au cas où ils seraient utilisés pour fournir un "
 "service qui tu utilises."
 
-#: .\root\templates\cookies.html:21
+#: .\root\templates\cookies.html:26
 msgid "Cookies Policy Generator from"
 msgstr "Générateur de politique de cookies de"
 
-#: .\root\templates\cookies.html:23
+#: .\root\templates\cookies.html:28
 msgid "The Cookies We Set"
 msgstr "Les cookies que nous créons"
 
-#: .\root\templates\cookies.html:26
+#: .\root\templates\cookies.html:31
 msgid "Email newsletters related cookies"
 msgstr "Cookies liés aux newsletters par e-mail"
 
-#: .\root\templates\cookies.html:27
+#: .\root\templates\cookies.html:32
 msgid ""
 "This site offers newsletter or email subscription services and cookies may "
 "be used to remember if you are already registered and whether to show "
@@ -1741,22 +1751,22 @@ msgstr ""
 "et si vous voulez montrer certaines notifications qui pourraient n'être "
 "valables que pour les abonnés/désabonnés utilisateurs."
 
-#: .\root\templates\cookies.html:30
+#: .\root\templates\cookies.html:36
 msgid "Forms related cookies"
 msgstr ""
 
-#: .\root\templates\cookies.html:31
+#: .\root\templates\cookies.html:37
 msgid ""
 "When you submit data to through a form such as those found on contact pages "
 "or comment forms cookies may be set to remember your user details for future "
 "correspondence."
 msgstr "Cookies liés aux formulaires"
 
-#: .\root\templates\cookies.html:34
+#: .\root\templates\cookies.html:41
 msgid "Site preferences cookies"
 msgstr "Cookies des préférences du site"
 
-#: .\root\templates\cookies.html:35
+#: .\root\templates\cookies.html:42
 msgid ""
 "In order to provide you with a great experience on this site we provide the "
 "functionality to set your preferences for how this site runs when you use "
@@ -1771,11 +1781,11 @@ msgstr ""
 "chaque fois que vous interagissez avec une page est affectéepar vos "
 "préférences."
 
-#: .\root\templates\cookies.html:38
+#: .\root\templates\cookies.html:46
 msgid "Third Party Cookies"
 msgstr "Cookies tiers"
 
-#: .\root\templates\cookies.html:39
+#: .\root\templates\cookies.html:47
 msgid ""
 "In some special cases we also use cookies provided by trusted third parties. "
 "The following section details which third party cookies you might encounter "
@@ -1785,7 +1795,7 @@ msgstr ""
 "fournis par des tiers de confiance.  La section suivante détaille les "
 "cookies tiers que vous pourriez rencontrer via ce site."
 
-#: .\root\templates\cookies.html:43
+#: .\root\templates\cookies.html:52
 msgid ""
 "This site uses Google Analytics which is one of the most widespread and "
 "trusted analytics solution on the web for helping us to understand how you "
@@ -1800,7 +1810,7 @@ msgstr ""
 "sur le site et les pages que vousvisite pour que nous puissions continuer à "
 "produire du contenu engageant."
 
-#: .\root\templates\cookies.html:45
+#: .\root\templates\cookies.html:54
 msgid ""
 "For more information on Google Analytics cookies, see the official Google "
 "Analytics page."
@@ -1808,7 +1818,7 @@ msgstr ""
 "Pour plus d'informations sur les cookies de Google Analytics, consultez la "
 "page officielle de Google Analytics."
 
-#: .\root\templates\cookies.html:49
+#: .\root\templates\cookies.html:59
 msgid ""
 "This site uses Google Recaptcha which is one of the most widespread and "
 "trusted anti bot solution on the web for helping us to filter the site that "
@@ -1818,7 +1828,7 @@ msgstr ""
 "anti-bot de confiance sur le web pour nous aider à filtrer le site qui peut "
 "améliorer votre expérience."
 
-#: .\root\templates\cookies.html:51 .\root\templates\cookies.html:57
+#: .\root\templates\cookies.html:61 .\root\templates\cookies.html:68
 msgid ""
 "For more information on Google Recaptcha cookies, see the official Google "
 "Recaptcha page."
@@ -1826,7 +1836,7 @@ msgstr ""
 "Pour plus d'informations sur les cookies Google Recaptcha, consultez la page "
 "officielle de Google Recaptcha."
 
-#: .\root\templates\cookies.html:55
+#: .\root\templates\cookies.html:66
 msgid ""
 "This site uses IPINFO which is one of the most widespread and trusted Ip "
 "locator solution on the web for helping us to filter the content based on "
@@ -1837,7 +1847,7 @@ msgstr ""
 "contenu en fonction de le public ciblé, qui peut vous aider et trouver ce "
 "qui vous intéresse."
 
-#: .\root\templates\cookies.html:60
+#: .\root\templates\cookies.html:72
 msgid ""
 "We also use social media buttons and/or plugins on this site that allow you "
 "to connect with your social network in various ways. For these to work the "
@@ -1854,11 +1864,11 @@ msgstr ""
 " leur site ou contribuer aux données qu'ils détiennent à diverses fins "
 "décrites dans leurs politiques de confidentialité respectives."
 
-#: .\root\templates\cookies.html:63
+#: .\root\templates\cookies.html:76
 msgid "More Information"
 msgstr "Plus d'information"
 
-#: .\root\templates\cookies.html:64
+#: .\root\templates\cookies.html:77
 msgid ""
 "Hopefully that has clarified things for you and as was previously mentioned "
 "if there is something that you aren't sure whether you need or not it's "
@@ -1871,11 +1881,11 @@ msgstr ""
 "activés au cas où ils interagissent avec l'un des les fonctionnalités que "
 "vous utilisez sur notre site."
 
-#: .\root\templates\cookies.html:65
+#: .\root\templates\cookies.html:79
 msgid "For more general information on cookies, please read"
 msgstr "Pour plus d'informations générales sur les cookies, veuillez lire"
 
-#: .\root\templates\cookies.html:67
+#: .\root\templates\cookies.html:81
 msgid ""
 "However if you are still looking for more information then you can contact "
 "us through one of our preferred contact methods"
@@ -1883,7 +1893,7 @@ msgstr ""
 "Cependant, si vous recherchez toujours plus d'informations, vous pouvez nous "
 "contacter via l'une de nos méthodes de contact préférées."
 
-#: .\root\templates\cookies.html:69
+#: .\root\templates\cookies.html:84
 msgid "By visiting this link"
 msgstr "En visitant ce lien"
 
