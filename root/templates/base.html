@@ -8,6 +8,9 @@
 <html lang="{{LANGUAGE_CODE}}">
 
 <head>
+    {% compress js %}
+    <script src="{% static 'js/jquery.min.js' %}"></script>
+    {% endcompress js %}
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -312,12 +315,11 @@
 
         })
     </script>
-    <script src="{% static 'js/jquery.min.js' %}"></script>
     <script src="{% static 'js/typeit.min.js' %}"></script>
     <script src="{% static 'js/nav.js' %}"></script>
-    {% endcompress %}
     {% block script %}
     {% endblock script %}
+    {% endcompress js %}
 
 </body>
 

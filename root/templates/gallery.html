@@ -3,21 +3,24 @@
 {% load media %}
 
 {% block title %}
-<link rel="stylesheet" href="{% static 'css/services.css' %}">
+<link rel="stylesheet" href="{% static 'css/gallery.css' %}">
 <title>Gallery - {{user.nom_sur_site}}</title>
 
 {% endblock %}
 {% block content %}
 
-<div class="row m-0">
-    {% for gal in gallery %}
-    <div class="card mb-3 col-md-4 mx-auto">
-        <img src="{% media gal.image %}" class="card-img-top" alt="{{gal.alt}}">
-        <div class="card-body">
-            <h5 class="card-title">{{gal.image_title}}</h5>
-            <a href="#"></a>
-        </div>
+<div class="galleryWrapper">
+    <div class="galleryContainer">
+        <h1 data-text="Image gallery">Image gallery</h1>
+        <main>
+            {% for gal in gallery %}
+            <figure><img src="{% media gal.image %}" alt="{{gal.alt}}" title="{{gal.alt}}">
+                <figcaption>{{gal.image_title}}</figcaption>
+            </figure>
+    
+            {% endfor %}
+        </main>
     </div>
-    {% endfor %}
 </div>
+{% include 'contact-footer.html' %}
 {% endblock content %}

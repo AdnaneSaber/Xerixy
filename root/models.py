@@ -63,7 +63,7 @@ class ExternalTools(models.Model):
     status = models.BooleanField(default=True)
 
     def __str__(self):
-        return f'{self.status}'
+        return f'Status: {self.status}'
 
 
 class Maintenance(models.Model):
@@ -84,7 +84,7 @@ class New(models.Model):
     post_url = models.CharField(
         max_length=255, null=False, blank=True, unique=True)
     post_content = models.TextField(blank=False)
-    post_image = models.ImageField(upload_to='article/', default='/no_image.jpg')
+    post_image = models.ImageField(upload_to='blog/', default='/no_image.jpg')
     post_time = models.DateTimeField(auto_now_add=True)
 
     post_meta_title = models.CharField(blank=True,
@@ -138,7 +138,7 @@ class Service(models.Model):
     @property
     def Image_preview(self):
         if self.service_image:
-            return mark_safe('<img src="{}" width="75" height="50" />'.format(self.service_image.url))
+            return mark_safe('<img src="{}"style="object-fit: cover;object-position: top;" width="75" height="50" />'.format(self.service_image.url))
         return ""
 
     def __str__(self):
@@ -162,12 +162,12 @@ class Gallery(models.Model):
     image_title = models.CharField(max_length=255, blank=False, null=False)
     image_alt = models.CharField(blank=True, max_length=255)
     image_description = models.CharField(blank=True, max_length=255)
-    image = models.ImageField(upload_to='article/', default='/no_image.jpg')
+    image = models.ImageField(upload_to='gallery/', default='/no_image.jpg')
 
     @property
     def Image_preview(self):
         if self.image:
-            return mark_safe('<img src="/static{}" width="75" height="50" />'.format(self.image.url))
+            return mark_safe('<img src="{}" style="object-fit: cover;object-position: top;" width="75" height="50" />'.format(self.image.url))
         return ""
 
 

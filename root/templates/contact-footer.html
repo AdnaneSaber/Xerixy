@@ -32,21 +32,21 @@
         </div>
     </div>
 </div>
-{% compress js %}
-<script src="{% static 'js/jquery.min.js' %}"></script>
+<input type="hidden" name="location">
+{% block script %}
 <script>
     $('#id_interestedBy option:first-child').text("{% trans 'I am interested in' %}");
 </script>
-{% endcompress %}
+<script>
+    $.get("https://ipinfo.io", function (response) {
+        $('#loc').val(`${response.city} - ${response.country}`);
+    }, "jsonp");
+</script>
+{% endblock script %}
 {% if success %}
 <script>
     document.getElementById("contact-form").reset();
 </script>
 {% endif %}
 
-<input type="hidden" name="location">
-<script>
-    $.get("https://ipinfo.io", function (response) {
-        $('#loc').val(`${response.city} - ${response.country}`);
-    }, "jsonp");
-</script>
+
