@@ -12,7 +12,7 @@ from tinymce.models import HTMLField
 def assetSaver(instance, filename):
     ext = filename.split('.')[-1]
     filename = "%s.%s" % (datetime.now(), ext)
-    return os.path.join(settings.BASE_DIR / "static", filename)
+    return os.path.join(settings.BASE_DIR / "media", filename)
 
 
 def faviconGenerator(instance, filename):
@@ -84,8 +84,7 @@ class New(models.Model):
     post_url = models.CharField(
         max_length=255, null=False, blank=True, unique=True)
     post_content = models.TextField(blank=False)
-    post_image = models.ImageField(
-        upload_to=assetSaver, default='/no_image.jpg')
+    post_image = models.ImageField(upload_to='article/', default='/no_image.jpg')
     post_time = models.DateTimeField(auto_now_add=True)
 
     post_meta_title = models.CharField(blank=True,
@@ -133,14 +132,13 @@ class Service(models.Model):
     service_meta_description = models.CharField(blank=True,
                                                 max_length=160)
     service_content = models.TextField(blank=False, default="pas de contenu..")
-    service_image = models.ImageField(
-        upload_to=assetSaver, default='/no_service.jpg')
+    service_image = models.ImageField(upload_to='article/', default='/no_service.jpg')
     service_image_alt = models.CharField(max_length=30, blank=True)
 
     @property
     def Image_preview(self):
         if self.service_image:
-            return mark_safe('<img src="/static{}" width="75" height="50" />'.format(self.service_image.url))
+            return mark_safe('<img src="{}" width="75" height="50" />'.format(self.service_image.url))
         return ""
 
     def __str__(self):
@@ -164,8 +162,7 @@ class Gallery(models.Model):
     image_title = models.CharField(max_length=255, blank=False, null=False)
     image_alt = models.CharField(blank=True, max_length=255)
     image_description = models.CharField(blank=True, max_length=255)
-    image = models.ImageField(
-        upload_to=assetSaver, default='/no_image.jpeg')
+    image = models.ImageField(upload_to='article/', default='/no_image.jpg')
 
     @property
     def Image_preview(self):

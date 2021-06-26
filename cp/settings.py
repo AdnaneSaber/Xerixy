@@ -184,6 +184,9 @@ STATICFILES_DIRS = [
     BASE_DIR / "portfolio/static"
 ]
 STATIC_ROOT = "/home/adn/chauffepro/static_files/"
+
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 
