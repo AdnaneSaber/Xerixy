@@ -61,6 +61,8 @@ class MaintenanceAdmin(admin.ModelAdmin):
         if count == 0:
             return True
         return False
+
+
 class ExternalToolsAdmin(admin.ModelAdmin):
 
     def has_delete_permission(self, request, obj=None):
@@ -79,18 +81,19 @@ class seoLinksAdmin(admin.ModelAdmin):
     readonly_fields = ('contentLength', )
     user = uf.objects.first()
     fieldsets = (
-            (None, {
-                'fields': ('title','url','content','meta_title','meta_description','contentLength'),
-                'description':
-                    f"""
+        (None, {
+            'fields': ('title', 'url', 'content', 'meta_title', 'meta_description', 'contentLength'),
+            'description':
+            f"""
                     <h3>{{{{site_name}}}} : {user.nom_sur_site}</h3>
                     <h3>{{{{email}}}} : {user.email}</h3>
                     <h3>{{{{phone}}}} : {user.phone}</h3>
                     <h3>{{{{adresse}}}} : {user.adresse_local}</h3>
                     <h3> Links : link:URL< URL_CONTENT ></h3>
                     """
-            }),
-        )
+        }),
+    )
+
     def thumbnailWordCounter(self, obj):
         return obj.contentLength
     thumbnailWordCounter.allow_tags = True
@@ -109,7 +112,7 @@ class PageAdmin(SortableAdminMixin, admin.ModelAdmin):
 
 
 class CombinationAdmin(admin.ModelAdmin):
-    
+
     def has_add_permission(self, request):
         # if there's already an entry, do not allow adding
         count = Combination.objects.all().count()
@@ -117,6 +120,7 @@ class CombinationAdmin(admin.ModelAdmin):
             return True
         return False
     pass
+
 
 class PageContentAdmin(admin.ModelAdmin):
     list_filter = ('page', )
@@ -136,4 +140,6 @@ admin.site.register(SeoLink, seoLinksAdmin)
 admin.site.register(Maintenance, MaintenanceAdmin)
 admin.site.register(ExternalTools, ExternalToolsAdmin)
 admin.site.register(GitAccount, GitAdmin)
-admin.site.register(Combination,CombinationAdmin)
+admin.site.register(Combination, CombinationAdmin)
+admin.site.register(Banner)
+admin.site.register(Theme)

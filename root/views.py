@@ -3,10 +3,10 @@ from wsgiref.util import FileWrapper
 from django.http import Http404, HttpResponse, HttpResponseRedirect
 from django.shortcuts import redirect, render
 from django.views import generic
-from .models import Page, PageContent, Service, Gallery, SeoLink, UserInfo, New, PhoneClick, GitAccount, ExternalTools
+from .models import Banner, Page, PageContent, Service, Gallery, SeoLink, Theme, UserInfo, New, PhoneClick, GitAccount, ExternalTools
 from django.conf import settings
 from .forms import ContactForm
-from .serializers import PhoneSerializer, ExternalToolsSerializer
+from .serializers import ContentSerializer, PageSerializer, PhoneSerializer, ExternalToolsSerializer, ServiceSerializer, ThemeSerializer
 from datetime import datetime
 from rest_framework.response import Response
 from rest_framework.views import APIView
@@ -150,6 +150,34 @@ class phoneClick_view(APIView):
     def get(self, request):
         clicks = PhoneClick.objects.all()
         serializer = PhoneSerializer(clicks, many=True)
+        return Response(serializer.data)
+
+
+class Page_view(APIView):
+    def get(self, request):
+        pages = Page.objects.all()
+        serializer = PageSerializer(pages, many=True)
+        return Response(serializer.data)
+
+
+class Service_view(APIView):
+    def get(self, request):
+        services = Service.objects.all()
+        serializer = ServiceSerializer(services, many=True)
+        return Response(serializer.data)
+
+
+class Content_view(APIView):
+    def get(self, request, id):
+        content = PageContent.objects.filter(page=id)
+        serializer = ContentSerializer(content, many=True)
+        return Response(serializer.data)
+
+
+class Theme_view(APIView):
+    def get(self, request):
+        theme = Theme.objects.all()
+        serializer = ThemeSerializer(theme, many=True)
         return Response(serializer.data)
 
 

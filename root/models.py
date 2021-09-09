@@ -88,9 +88,10 @@ class New(models.Model):
     post_time = models.DateTimeField(auto_now_add=True)
 
     post_meta_title = models.CharField(blank=True,
-                                          max_length=60)
+                                       max_length=60)
     post_meta_description = models.CharField(blank=True,
-                                                max_length=160)
+                                             max_length=160)
+
     def save(self, *args, **kwargs):
         if not self.post_url:
             self.post_url = urlFormater(self.post_title)
@@ -132,7 +133,8 @@ class Service(models.Model):
     service_meta_description = models.CharField(blank=True,
                                                 max_length=160)
     service_content = models.TextField(blank=False, default="pas de contenu..")
-    service_image = models.ImageField(upload_to='article/', default='/no_service.jpg')
+    service_image = models.ImageField(
+        upload_to='article/', default='/no_service.jpg')
     service_image_alt = models.CharField(max_length=30, blank=True)
 
     @property
@@ -262,3 +264,16 @@ class PageContent(models.Model):
 
     def __str__(self):
         return self.content_title
+
+
+class Theme(models.Model):
+    # banner = models.ForeignKey(Banner, on_delete=models.CASCADE)
+    Slogan = models.CharField(max_length=50, default="Xerixy CMS")
+    subSlogan = models.CharField(
+        max_length=50, default="Your CMS to make websites easily")
+
+
+class Banner(models.Model):
+    banner_image = models.ImageField(
+        upload_to='theme/', default='/no_image.jpg')
+    theme = models.ForeignKey(Theme, on_delete=models.CASCADE)

@@ -220,6 +220,9 @@
                             href="{% url 'page' page.page_url %}">{% blocktrans with page.page_title|template_trans as page_title %}{{page_title}}{% endblocktrans %}</a>
                     </li>
                     {% endfor %}
+                    {% if gallery %}
+                    <li class="navLinksItem"><a href="{% url 'gallery' %}">{% trans 'Gallery' %}</a></li>
+                    {% endif %}
                     {% if news %}
                     <li class="navLinksItem"><a href="{% url 'news' %}">{% trans 'Blog' %}</a></li>
                     {% endif %}

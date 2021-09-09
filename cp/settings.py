@@ -44,7 +44,7 @@ INSTALLED_APPS = [
     'django.contrib.sites',
     'rest_framework',
     'crispy_forms',
-    # 'corsheaders',
+    'corsheaders',
     'tinymce',
     'portfolio',
     'captcha',
@@ -65,8 +65,8 @@ REST_FRAMEWORK = {
     ]
 }
 MIDDLEWARE = [
-    # 'corsheaders.middleware.CorsMiddleware',
-    # 'django.middleware.common.CommonMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
+    'django.middleware.common.CommonMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.locale.LocaleMiddleware',
@@ -77,7 +77,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'maintenance_mode.middleware.MaintenanceModeMiddleware',
 ]
-# CORS_ALLOW_ALL_ORIGINS = True
+CORS_ALLOW_ALL_ORIGINS = True
 CONTEXT_PROCESSORS = ['maintenance_mode.context_processors.maintenance_mode']
 ROOT_URLCONF = 'cp.urls'
 
@@ -150,7 +150,7 @@ LANGUAGES = [
   ('en', _('en')),
   ('fr', _('fr')),
 ]
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Africa/Casablanca'
 
 USE_I18N = True
 
