@@ -48,7 +48,7 @@ httpx==0.13.3
 hyperframe==5.2.0
 idna==2.10
 itsdangerous==1.1.0
-Jinja2==2.11.3
+Jinja2==3.1.5
 libusb==1.0.23b7
 MarkupSafe==1.1.1
 maxminddb==2.0.3
